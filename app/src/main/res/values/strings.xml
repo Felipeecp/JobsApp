@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">JobsApp</string>
+    <string name="home_main_text">Encontre um Serviço</string>
+    <string name="cadatro_nome">Nome</string>
+    <string name="cadastro_email">Email</string>
+    <string name="cadastro_senha">Senha</string>
+    <string name="btn_cadastro_cadastrar">Cadastrar-se</string>
+    <string name="txt_home_area">Área</string>
+    <string name="txt_home_ofertas">Ofertas de Serviço</string>
+    <string name="txt_home_titulo">Titulo</string>
+    <string name="txt_itemServico_descricao">Descrição</string>
+    <string name="txt_itemServico_salario">Salario :</string>
+    <string name="txt_itemServico_valorSalario">R$ 00,00</string>
+    <string name="txt_itemServico_vagas">Vagas :</string>
+    <string name="txt_itemServico_valorVagas">0</string>
+    <string name="txtv_detalhes_da_oferta">Detalhes da Oferta</string>
 </resources>
