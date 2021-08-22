@@ -6,11 +6,11 @@ import android.os.Bundle;
 
 import com.luiz.jobsapp.R;
 
-public class DetalhesActivity extends AppCompatActivity {
+public class DetalheOfertaActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_detalhes);
+        setContentView(R.layout.activity_detalhe_oferta);
     }
 }
