@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "936774418859",
+    "project_id": "jobsapp-e5fbb",
+    "storage_bucket": "jobsapp-e5fbb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:936774418859:android:1669780367901e9fcdd2ee",
+        "android_client_info": {
+          "package_name": "com.luiz.jobsapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "936774418859-8o974rn7kodpi2uej9qkdof9h8ebd0rj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.luiz.jobsapp",
+            "certificate_hash": "aeb0ee03bcb40fb5512533b758c98a7df5ea7611"
+          }
+        },
+        {
+          "client_id": "936774418859-mm5nd3fj38v7a72ghlemqop79akm84u3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBm3nMM6zWF5akvg9FY0JHBxqQUYHxBH3U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "936774418859-mm5nd3fj38v7a72ghlemqop79akm84u3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

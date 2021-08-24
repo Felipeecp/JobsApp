@@ -11,6 +11,7 @@
 
 
     <ImageView
+        android:id="@+id/imgv_cadastro_padrao"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:src="@drawable/profile"
@@ -18,34 +19,41 @@
         />
 
     <EditText
+        android:id="@+id/edt_cadastro_nome"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/cadatro_nome"
         android:background="@drawable/bg_edit_text"
         android:padding="10dp"
         android:layout_marginBottom="16dp"
+        android:inputType="textPersonName"
         />
 
 
     <EditText
+        android:id="@+id/edt_cadastro_email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/cadastro_email"
         android:background="@drawable/bg_edit_text"
         android:padding="10dp"
         android:layout_marginBottom="16dp"
+        android:inputType="textEmailAddress"
         />
 
     <EditText
+        android:id="@+id/edt_cadastro_senha"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/cadastro_senha"
         android:background="@drawable/bg_edit_text"
         android:padding="10dp"
         android:layout_marginBottom="24dp"
+        android:inputType="textPassword"
         />
 
     <Button
+        android:id="@+id/btn_cadastrar"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:text="@string/btn_cadastro_cadastrar"
