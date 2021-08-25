@@ -14,4 +14,7 @@
     <string name="txt_itemServico_vagas">Vagas :</string>
     <string name="txt_itemServico_valorVagas">0</string>
     <string name="txtv_detalhes_da_oferta">Detalhes da Oferta</string>
+    <string name="txt_cadastrar_oferta_de_serviço" >Cadastrar Oferta de Serviço</string>
+    <string name="txt_quantidade_vagas">Quantidade de vagas</string>
+    <string name="btn_cadastrar_oferta">Cadastrar Serviço</string>
 </resources>
