@@ -1,23 +1,27 @@
 package com.luiz.jobsapp.activity;
 
-import androidx.annotation.NonNull;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.navigation.ui.AppBarConfiguration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
-
+import com.google.android.material.snackbar.Snackbar;
 import com.luiz.jobsapp.R;
 import com.luiz.jobsapp.adapter.AdapterOfertas;
+import com.luiz.jobsapp.databinding.ActivityMinhasOfertasBinding;
 import com.luiz.jobsapp.model.Servico;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class HomeActivity extends AppCompatActivity {
+public class MinhasOfertasActivity extends AppCompatActivity {
+
+    private AppBarConfiguration appBarConfiguration;
+    private ActivityMinhasOfertasBinding binding;
 
     private List<Servico> servicoList = new ArrayList<>();
     private RecyclerView recyclerOfertas;
@@ -26,37 +30,32 @@ public class HomeActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home);
+
+
+
+        binding = ActivityMinhasOfertasBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
+
+        setSupportActionBar(binding.toolbar);
+
+        binding.fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MinhasOfertasActivity.this, CadastroOfertaActivity.class));
+            }
+        });
 
         this.criarServico();
         adapterOfertas = new AdapterOfertas(servicoList, this);
 
-        adapterOfertas = new AdapterOfertas(servicoList, this);
-
         // Configurando RecyclerView
-        recyclerOfertas = findViewById(R.id.rv_servicos);
+        recyclerOfertas = findViewById(R.id.rv_minhas_ofertas);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
         recyclerOfertas.setLayoutManager(layoutManager);
         recyclerOfertas.setHasFixedSize(true);
         recyclerOfertas.setAdapter(adapterOfertas);
-    }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_home, menu);
-        return super.onCreateOptionsMenu(menu);
-    }
 
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-
-        switch (item.getItemId()){
-            case R.id.home_perfil_top:
-                startActivity(new Intent(HomeActivity.this, MinhasOfertasActivity.class));
-                break;
-        }
-
-        return super.onOptionsItemSelected(item);
     }
 
     public void criarServico(){
@@ -68,5 +67,7 @@ public class HomeActivity extends AppCompatActivity {
 
         Servico servico3 = new Servico("Design", "R$ 500.00", "1");
         this.servicoList.add( servico3 );
+
+
     }
 }

@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.luiz.jobsapp">
+    <!-- Permissões internet -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- Permissões galeria -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -9,6 +13,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.JobsApp">
+        <activity
+            android:name=".activity.MinhasOfertasActivity"
+            android:exported="true"
+            android:label="@string/title_activity_minhas_ofertas"
+            android:theme="@style/Theme.JobsApp.NoActionBar" />
         <activity
             android:name=".activity.DetalheOfertaActivity"
             android:exported="true" />
@@ -20,6 +29,9 @@
             android:exported="true" />
         <activity
             android:name=".activity.CadastroActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.CadastroOfertaActivity"
             android:exported="true" />
         <activity
             android:name=".activity.LoginActivity"

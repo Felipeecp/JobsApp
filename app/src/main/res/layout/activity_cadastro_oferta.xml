@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:fillViewport="true"
+    >
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activity.CadastroOfertaActivity">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/txt_cadastrar_oferta_de_serviço"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/edi_nome_oferta"
+            android:layout_width="0dp"
+            android:layout_height="51dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="32dp"
+            android:background="@drawable/bg_edit_text"
+            android:hint="Nome da Oferta"
+            android:padding="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+        <EditText
+            android:id="@+id/edi_descricao_oferta"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="32dp"
+            android:background="@drawable/bg_edit_text"
+            android:hint="Descrição da oferta"
+            android:padding="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edi_nome_oferta" />
+
+        <TextView
+            android:id="@+id/txt_qtd_vagas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/txt_quantidade_vagas"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edi_descricao_oferta" />
+
+        <RadioGroup
+            android:id="@+id/rdgVagas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_qtd_vagas">
+
+            <RadioButton
+                android:id="@+id/vaga1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="+ 1" />
+
+            <RadioButton
+                android:id="@+id/vaga2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="+ 2" />
+
+            <RadioButton
+                android:id="@+id/vaga3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="+ 3" />
+
+            <RadioButton
+                android:id="@+id/vaga4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="+ 4" />
+
+            <RadioButton
+                android:id="@+id/vagaOutros"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Outros" />
+
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/edi_requisitos"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            android:background="@drawable/bg_edit_text"
+            android:hint="Requisitos"
+            android:padding="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rdgVagas" />
+
+        <EditText
+            android:id="@+id/edi_local"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="32dp"
+            android:background="@drawable/bg_edit_text"
+            android:hint="Local"
+            android:padding="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edi_requisitos" />
+
+        <TextView
+            android:id="@+id/horario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:text="Horários de trabalho"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edi_local" />
+
+        <RadioGroup
+            android:id="@+id/rdgPeriodo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/horario">
+
+            <RadioButton
+                android:id="@+id/meio_periodo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Meio Período" />
+
+            <RadioButton
+                android:id="@+id/integral"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Integral" />
+
+
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/valorSalario"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            android:background="@drawable/bg_edit_text"
+            android:hint="Valor pago por hora"
+            android:padding="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rdgPeriodo" />
+
+        <Button
+            android:id="@+id/btn_cadastrar_oferta"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="@string/btn_cadastrar_oferta"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/valorSalario" /><![CDATA[
+
+        />
+
+
+    ]]>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
