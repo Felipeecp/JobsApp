@@ -71,7 +71,7 @@ public class LoginActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
-                            Toast.makeText(LoginActivity.this, "Login efetuado com sucesso", Toast.LENGTH_SHORT).show();
+                            abrirHome();
                         }else{
                             String excecao = "";
                             try{
@@ -93,6 +93,11 @@ public class LoginActivity extends AppCompatActivity {
                     }
                 }
         );
+    }
+
+    private void abrirHome() {
+        startActivity(new Intent(LoginActivity.this, HomeActivity.class));
+        finish();
     }
 
     private boolean validarCamposLogin(String email, String senha){
@@ -123,5 +128,6 @@ public class LoginActivity extends AppCompatActivity {
         campoEmail = findViewById(R.id.edt_email_login);
         campoSenha = findViewById(R.id.edt_senha_login);
         btnEntrar = findViewById(R.id.btn_entrar_login);
+
     }
 }
