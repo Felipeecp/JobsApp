@@ -7,6 +7,15 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-
     <color name="cor_primaria">#5cc6ba</color>
+
+    <!--    PALETA DE CORES  (FIGMA)   -->
+    <color name="NileBlue">#163449</color>
+    <color name="Pelorous">#34ACC7</color>
+    <color name="LinkWater">#D2E0F1</color>
+    <color name="MediumPurple">#6565DD</color>
+    <color name="FundoPadrão">#FFFFFF</color>
+
+
+
 </resources>
