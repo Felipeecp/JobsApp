@@ -2,6 +2,7 @@ package com.luiz.jobsapp.activity;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -27,6 +28,8 @@ public class HomeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+        Toolbar myToolbar = findViewById(R.id.toolbar_home);
+        setSupportActionBar(myToolbar);
 
         this.criarServico();
         adapterOfertas = new AdapterOfertas(servicoList, this);

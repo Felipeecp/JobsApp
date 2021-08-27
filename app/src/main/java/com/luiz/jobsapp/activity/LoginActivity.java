@@ -36,6 +36,8 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+        startActivity(new Intent(LoginActivity.this, HomeActivity.class));
+
         inicializarComponentes();
 
         cadastro.setOnClickListener(new View.OnClickListener() {
