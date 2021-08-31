@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.PerfilActivicty"
+    >
+
+    <ImageView
+        android:id="@+id/backPerfil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_voltar_30" />
+
+    <ImageView
+        android:id="@+id/editPerfil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_edit_30" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.10" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.90" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.95" />
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardImagemPerfil"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:cardCornerRadius="150dp"
+        app:layout_constraintEnd_toStartOf="@id/guideline3"
+        app:layout_constraintStart_toEndOf="@id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/guideline4">
+
+        <ImageView
+            android:id="@+id/imagemPerfil"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:background="#FFFFFF"
+            android:scaleType="centerCrop"
+            android:src="@drawable/woman" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/txtNomeDoUsuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:text="@string/txt_nome_do_perfil"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@id/guideline3"
+        app:layout_constraintStart_toEndOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/cardImagemPerfil" />
+
+    <TextView
+        android:id="@+id/txtProfissaoDoUsuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="@string/txt_profissao"
+        android:textColor="@color/Grey"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toStartOf="@id/guideline3"
+        app:layout_constraintStart_toEndOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/txtNomeDoUsuario" />
+
+    <TextView
+        android:id="@+id/txtAvaliacaoDoUsuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="@string/txt_avaliacao_usuario"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold"
+
+        app:layout_constraintStart_toEndOf="@id/guideline2"
+        app:layout_constraintEnd_toStartOf="@id/guideline3"
+        app:layout_constraintBottom_toTopOf="@id/star1"
+        />
+
+
+
+
+
+    <ImageView
+        android:id="@+id/star1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_star_active_42"
+        tools:layout_editor_absoluteX="66dp"
+        tools:layout_editor_absoluteY="571dp"
+        app:layout_constraintStart_toEndOf="@id/guideline2"
+        app:layout_constraintEnd_toStartOf="@id/star2"
+        app:layout_constraintBottom_toTopOf="btn_contratar"
+        />
+
+    <ImageView
+        android:id="@+id/star2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_star_active_42"
+        tools:layout_editor_absoluteX="66dp"
+        tools:layout_editor_absoluteY="571dp"
+        app:layout_constraintStart_toEndOf="@id/star1"
+        app:layout_constraintEnd_toStartOf="@id/star3"
+        app:layout_constraintBottom_toTopOf="btn_contratar"
+        />
+    <ImageView
+        android:id="@+id/star3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_star_active_42"
+        tools:layout_editor_absoluteX="66dp"
+        tools:layout_editor_absoluteY="571dp"
+        app:layout_constraintStart_toEndOf="@id/star2"
+        app:layout_constraintEnd_toStartOf="@id/star4"
+        app:layout_constraintBottom_toTopOf="btn_contratar"
+        />
+
+    <ImageView
+        android:id="@+id/star4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_star_active_42"
+        tools:layout_editor_absoluteX="66dp"
+        tools:layout_editor_absoluteY="571dp"
+        app:layout_constraintStart_toEndOf="@id/star3"
+        app:layout_constraintEnd_toStartOf="@id/star5"
+        app:layout_constraintBottom_toTopOf="btn_contratar"
+        />
+
+    <ImageView
+        android:id="@+id/star5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_star_deactive_42"
+        tools:layout_editor_absoluteX="66dp"
+        tools:layout_editor_absoluteY="571dp"
+        app:layout_constraintStart_toEndOf="@id/star4"
+        app:layout_constraintEnd_toStartOf="@id/guideline3"
+        app:layout_constraintBottom_toTopOf="btn_contratar"
+        />
+
+    <Button
+        android:id="@+id/btn_contratar"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="#5CC6BA"
+        android:text="@string/txt_contratar_usuario"
+        app:layout_constraintBottom_toTopOf="@+id/guideline5"
+        app:layout_constraintEnd_toStartOf="@id/guideline3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@id/guideline2" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

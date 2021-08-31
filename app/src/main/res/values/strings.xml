@@ -23,7 +23,13 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
-    <string name="txt_cadastrar_oferta_de_serviço" >Cadastrar Oferta de Serviço</string>
+    <string name="txt_cadastrar_oferta_de_serviço">Cadastrar Oferta de Serviço</string>
     <string name="txt_quantidade_vagas">Quantidade de vagas</string>
     <string name="btn_cadastrar_oferta">Cadastrar Serviço</string>
+
+    <!--Perfil -->
+    <string name="txt_nome_do_perfil">Brenda Carvalho</string>
+    <string name="txt_profissao">Profissão: atora, modelo e design</string>
+    <string name="txt_avaliacao_usuario">Avaliação do usuário</string>
+    <string name="txt_contratar_usuario">Contratar Usuário</string>
 </resources>

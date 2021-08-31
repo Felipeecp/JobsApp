@@ -16,6 +16,9 @@
     <color name="MediumPurple">#6565DD</color>
     <color name="FundoPadrão">#FFFFFF</color>
 
+    <!-- Tela de perfil -->
+    <color name="Grey">#808080</color>
+
 
 
 </resources>
