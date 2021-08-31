@@ -31,7 +31,6 @@ public class HomeActivity extends AppCompatActivity {
         Toolbar myToolbar = findViewById(R.id.toolbar_home);
         setSupportActionBar(myToolbar);
 
-        this.criarServico();
         adapterOfertas = new AdapterOfertas(servicoList, this);
 
         adapterOfertas = new AdapterOfertas(servicoList, this);
@@ -62,14 +61,5 @@ public class HomeActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void criarServico(){
-        Servico servico = new Servico("Programador", "R$ 1000.00", "3");
-        this.servicoList.add( servico );
 
-        Servico servico2 = new Servico("Pintor", "R$ 100.00", "1");
-        this.servicoList.add( servico2 );
-
-        Servico servico3 = new Servico("Design", "R$ 500.00", "1");
-        this.servicoList.add( servico3 );
-    }
 }

@@ -26,4 +26,16 @@
     <string name="txt_cadastrar_oferta_de_serviço" >Cadastrar Oferta de Serviço</string>
     <string name="txt_quantidade_vagas">Quantidade de vagas</string>
     <string name="btn_cadastrar_oferta">Cadastrar Serviço</string>
+
+    <string-array name="tempo_oferta">
+        <item>Diario</item>
+        <item>Semanal</item>
+        <item>Mensal</item>
+    </string-array>
+
+    <string-array name="areas">
+        <item>TI</item>
+        <item>Reforma</item>
+        <item>Design</item>
+    </string-array>
 </resources>

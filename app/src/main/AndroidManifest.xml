@@ -3,7 +3,9 @@
     package="com.luiz.jobsapp">
     <!-- Permissões internet -->
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- Permissões galeria -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <!-- Permissões galeria -->
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application

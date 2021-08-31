@@ -1,15 +1,94 @@
 package com.luiz.jobsapp.model;
 
+import com.google.firebase.database.DatabaseReference;
+import com.luiz.jobsapp.helper.FirebaseConfig;
+
 public class Servico {
 
-    String titulo;
-    String salario;
-    String qtdVagas;
+    private String idServico;
+    private String titulo;
+    private String salario;
+    private String qtdVagas;
+    private String descricao;
+    private String foto;
+    private String local;
+    private String area;
+    private String tempo;
+    private String telefone;
 
-    public Servico(String titulo, String salario, String qtdVagas) {
-        this.titulo = titulo;
-        this.salario = salario;
-        this.qtdVagas = qtdVagas;
+    public Servico() {
+        DatabaseReference servicoRef = FirebaseConfig.getFirebaseDatabase()
+                .child("minhas_ofertas");
+        setIdServico( servicoRef.push().getKey() );
+    }
+
+    public void salvar(){
+
+        String idUsuario = FirebaseConfig.getIdUsuario();
+        DatabaseReference servicoRef = FirebaseConfig.getFirebaseDatabase()
+                .child("minhas_ofertas");
+
+        servicoRef.child(idUsuario)
+                .child(getIdServico())
+                .setValue(this);
+
+    }
+
+
+    public String getTelefone() {
+        return telefone;
+    }
+
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
+    }
+
+    public String getTempo() {
+        return tempo;
+    }
+
+    public void setTempo(String tempo) {
+        this.tempo = tempo;
+    }
+
+    public String getLocal() {
+        return local;
+    }
+
+    public void setLocal(String local) {
+        this.local = local;
+    }
+
+    public String getArea() {
+        return area;
+    }
+
+    public void setArea(String area) {
+        this.area = area;
+    }
+
+    public String getFoto() {
+        return foto;
+    }
+
+    public void setFoto(String foto) {
+        this.foto = foto;
+    }
+
+    public String getIdServico() {
+        return idServico;
+    }
+
+    public void setIdServico(String idServico) {
+        this.idServico = idServico;
+    }
+
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
     }
 
     public String getTitulo() {

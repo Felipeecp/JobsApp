@@ -24,7 +24,6 @@ public class CadastroActivity extends AppCompatActivity {
 
     private EditText campoNome, campoEmail, campoSenha;
     private Button btnCadastro;
-    private FirebaseAuth autenticacao;
 
     private Usuario usuario;
 
@@ -56,16 +55,14 @@ public class CadastroActivity extends AppCompatActivity {
     }
 
     private void cadastrarUsuario() {
-        autenticacao = FirebaseConfig.getFirebaseAuth();
+        FirebaseAuth autenticacao = FirebaseConfig.getFirebaseAuth();
         autenticacao.createUserWithEmailAndPassword(
                 usuario.getEmail(), usuario.getSenha()
         ).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
-                    String idUsuario = FirebaseConfig.getIdUsuario();
-                    usuario.setIdUsuario(idUsuario);
-                    usuario.salvarUsuario();
+                    Toast.makeText(CadastroActivity.this, "Cadastro realizado com sucesso!", Toast.LENGTH_SHORT).show();
                     finish();
                 }else{
                     String excecao = "";
