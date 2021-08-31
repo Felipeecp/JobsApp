@@ -6,60 +6,80 @@
     android:layout_height="match_parent"
     tools:context=".activity.DetalheOfertaActivity">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar_detalhes"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/white"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" >
-
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/txtv_detalhes_da_oferta"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            />
-
-    </androidx.appcompat.widget.Toolbar>
-
     <ImageView
-        android:id="@+id/img_detalhes_oferta"
+        android:id="@+id/backOferta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        app:layout_constraintTop_toBottomOf="@id/toolbar_detalhes"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        tools:src="@tools:sample/avatars"
-        />
+        app:layout_constraintStart_toEndOf="@+id/guideline6Descricao"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_voltar_30" />
+
+    <TextView
+        android:id="@+id/text_oferta"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/txtv_detalhes_da_oferta"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/favoritar"
+        app:layout_constraintStart_toEndOf="@+id/backOferta"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/favoritar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline6Descricao2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_favorite_oferta" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/img_detalhes_oferta"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:cardCornerRadius="150dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toEndOf="@id/guideline6Descricao"
+        app:layout_constraintEnd_toStartOf="@id/guideline6Descricao2"
+        app:layout_constraintTop_toBottomOf="@+id/text_oferta">
+
+        <ImageView
+            android:id="@+id/detalhes_oferta_IMG"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:background="#FFFFFF"
+            android:scaleType="centerCrop"
+            android:src="@drawable/pintor" />
+    </androidx.cardview.widget.CardView>
+
+
 
     <TextView
         android:id="@+id/titulo_detalhe_oferta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:textSize="20sp"
-        android:text="Titulo"
+        android:padding="16dp"
+        android:text="Pintor Ninja"
         android:textColor="@color/black"
-        app:layout_constraintTop_toBottomOf="@id/img_detalhes_oferta"
-        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img_detalhes_oferta" />
+
 
     <TextView
+        android:drawableLeft="@drawable/ic_time_work_24"
         android:id="@+id/txtv_tempo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Tempo"
+        android:text="Meio Período"
+        android:layout_gravity="center"
+        app:layout_constraintStart_toEndOf="@id/guideline6Descricao"
         app:layout_constraintTop_toBottomOf="@id/titulo_detalhe_oferta"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@id/txtv_data"
         />
 
@@ -67,12 +87,36 @@
         android:id="@+id/txtv_data"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="18/08/2021"
-        app:layout_constraintTop_toBottomOf="@id/titulo_detalhe_oferta"
+        android:drawableLeft="@drawable/ic_calendar_24"
+        android:text="21-07-2021"
         app:layout_constraintStart_toEndOf="@id/txtv_tempo"
+        app:layout_constraintTop_toBottomOf="@id/titulo_detalhe_oferta"
         app:layout_constraintEnd_toStartOf="@id/txtv_local"
         />
+
+
+
+    <TextView
+        android:id="@+id/txtv_local"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="São Luís"
+        android:drawableLeft="@drawable/ic_local_24"
+        app:layout_constraintStart_toEndOf="@id/txtv_data"
+        app:layout_constraintTop_toBottomOf="@id/titulo_detalhe_oferta"
+        app:layout_constraintEnd_toStartOf="@id/guideline6Descricao2"
+         />
+
+    <!--
+    <TextView
+        android:id="@+id/txtv_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="18/08/2021"
+        app:layout_constraintEnd_toStartOf="@id/txtv_local"
+        app:layout_constraintStart_toEndOf="@id/txtv_tempo"
+        app:layout_constraintTop_toBottomOf="@id/titulo_detalhe_oferta" />
 
     <TextView
         android:id="@+id/txtv_local"
@@ -80,19 +124,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="Local"
-        app:layout_constraintTop_toBottomOf="@id/titulo_detalhe_oferta"
-        app:layout_constraintStart_toEndOf="@id/txtv_data"
         app:layout_constraintEnd_toEndOf="parent"
-        />
-
-    <View
-        android:id="@+id/view_line_1"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@android:color/darker_gray"
-        app:layout_constraintTop_toBottomOf="@id/txtv_data"
-        app:layout_constraintBottom_toTopOf="@id/txtv_detalhes"
-        />
+        app:layout_constraintStart_toEndOf="@id/txtv_data"
+        app:layout_constraintTop_toBottomOf="@id/titulo_detalhe_oferta" />
 
     <TextView
         android:id="@+id/txtv_detalhes"
@@ -105,36 +139,38 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/txtv_tempo" />
 
+
     <TextView
         android:id="@+id/txtv_salario_detalhes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
         android:layout_marginStart="40dp"
+        android:layout_marginTop="32dp"
         android:text="@string/txt_itemServico_salario"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@id/txtv_detalhes"
         app:layout_constraintStart_toStartOf="parent"
-        />
+        app:layout_constraintTop_toBottomOf="@id/txtv_detalhes" />
+
+
+
     <TextView
         android:id="@+id/txtv_salario_valor_detalhes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
         android:text="@string/txt_itemServico_valorSalario"
         android:textSize="16sp"
-        android:layout_marginStart="8dp"
-        app:layout_constraintStart_toEndOf="@id/txtv_salario_detalhes"
-        app:layout_constraintTop_toTopOf="@id/txtv_salario_detalhes"
         app:layout_constraintBottom_toBottomOf="@id/txtv_salario_detalhes"
-        />
+        app:layout_constraintStart_toEndOf="@id/txtv_salario_detalhes"
+        app:layout_constraintTop_toTopOf="@id/txtv_salario_detalhes" />
 
     <TextView
         android:id="@+id/txtv_vagas_detalhes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
         android:layout_marginStart="40dp"
+        android:layout_marginTop="8dp"
         android:text="@string/txt_itemServico_vagas"
         android:textSize="16sp"
         android:textStyle="bold"
@@ -151,5 +187,36 @@
         app:layout_constraintBottom_toBottomOf="@+id/txtv_vagas_detalhes"
         app:layout_constraintStart_toEndOf="@+id/txtv_vagas_detalhes"
         app:layout_constraintTop_toTopOf="@+id/txtv_vagas_detalhes" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="left" />
+-->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline6Descricao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.10" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline6Descricao2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.90" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline6Descricao3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.05" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline6Descricao4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.95" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
