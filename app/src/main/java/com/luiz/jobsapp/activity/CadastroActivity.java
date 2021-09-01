@@ -3,10 +3,12 @@ package com.luiz.jobsapp.activity;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -24,8 +26,10 @@ public class CadastroActivity extends AppCompatActivity {
 
     private EditText campoNome, campoEmail, campoSenha;
     private Button btnCadastro;
+    private TextView btnTermosCondicoes;
 
     private Usuario usuario;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +53,13 @@ public class CadastroActivity extends AppCompatActivity {
 
                     cadastrarUsuario();
                 }
+
+            }
+        });
+        btnTermosCondicoes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity( new Intent(CadastroActivity.this,TermosECondicoesActivity.class));
 
             }
         });
@@ -121,5 +132,6 @@ public class CadastroActivity extends AppCompatActivity {
         campoEmail = findViewById(R.id.edt_cadastro_email);
         campoSenha = findViewById(R.id.edt_cadastro_senha);
         btnCadastro = findViewById(R.id.btn_cadastrar);
+        btnTermosCondicoes = findViewById(R.id.txtv_termos_condicoes);
     }
 }
