@@ -131,9 +131,8 @@ public class CadastroOfertaActivity extends AppCompatActivity implements View.On
                         }
                     }
                 });
-
             }
-        }).addOnFailureListener(new OnFailureListener() {
+        }).addOnFailureListener(new OnFailureListener(){
             @Override
             public void onFailure(@NonNull Exception e) {
                 Toast.makeText(CadastroOfertaActivity.this,

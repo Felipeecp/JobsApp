@@ -14,14 +14,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.JobsApp">
         <activity
-<<<<<<< HEAD
-            android:name=".activity.PerfilActivicty">
-            android:exported="true"
-        </activity>
-=======
+            android:name=".activity.PerfilActivicty"
+            android:exported="true"/>
+        <activity
             android:name=".activity.TermosECondicoesActivity"
             android:exported="true" />
->>>>>>> a701e87f7cb03d89ed74c07cf9faa40ed2fbf335
         <activity
             android:name=".activity.MinhasOfertasActivity"
             android:exported="true"

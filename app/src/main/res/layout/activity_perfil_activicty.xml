@@ -124,7 +124,7 @@
         tools:layout_editor_absoluteY="571dp"
         app:layout_constraintStart_toEndOf="@id/guideline2"
         app:layout_constraintEnd_toStartOf="@id/star2"
-        app:layout_constraintBottom_toTopOf="btn_contratar"
+        app:layout_constraintBottom_toTopOf="@id/btn_contratar"
         />
 
     <ImageView
@@ -136,7 +136,7 @@
         tools:layout_editor_absoluteY="571dp"
         app:layout_constraintStart_toEndOf="@id/star1"
         app:layout_constraintEnd_toStartOf="@id/star3"
-        app:layout_constraintBottom_toTopOf="btn_contratar"
+        app:layout_constraintBottom_toTopOf="@id/btn_contratar"
         />
     <ImageView
         android:id="@+id/star3"
@@ -147,7 +147,7 @@
         tools:layout_editor_absoluteY="571dp"
         app:layout_constraintStart_toEndOf="@id/star2"
         app:layout_constraintEnd_toStartOf="@id/star4"
-        app:layout_constraintBottom_toTopOf="btn_contratar"
+        app:layout_constraintBottom_toTopOf="@id/btn_contratar"
         />
 
     <ImageView
@@ -159,7 +159,7 @@
         tools:layout_editor_absoluteY="571dp"
         app:layout_constraintStart_toEndOf="@id/star3"
         app:layout_constraintEnd_toStartOf="@id/star5"
-        app:layout_constraintBottom_toTopOf="btn_contratar"
+        app:layout_constraintBottom_toTopOf="@id/btn_contratar"
         />
 
     <ImageView
@@ -171,7 +171,7 @@
         tools:layout_editor_absoluteY="571dp"
         app:layout_constraintStart_toEndOf="@id/star4"
         app:layout_constraintEnd_toStartOf="@id/guideline3"
-        app:layout_constraintBottom_toTopOf="btn_contratar"
+        app:layout_constraintBottom_toTopOf="@id/btn_contratar"
         />
 
     <Button

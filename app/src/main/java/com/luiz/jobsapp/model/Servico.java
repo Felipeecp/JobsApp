@@ -32,6 +32,39 @@ public class Servico {
                 .child(getIdServico())
                 .setValue(this);
 
+        salvarAnuncioPublico();
+    }
+
+    private void salvarAnuncioPublico() {
+
+        DatabaseReference servicoRef = FirebaseConfig.getFirebaseDatabase().child("serviços");
+
+        servicoRef.child(getArea())
+                .child(getIdServico())
+                .setValue(this);
+
+    }
+
+    public void removerAnuncio(){
+
+        String idUsuario = FirebaseConfig.getIdUsuario();
+        DatabaseReference servicoRef = FirebaseConfig.getFirebaseDatabase()
+                .child("meus_servicos")
+                .child(idUsuario)
+                .child(getIdServico());
+
+        removerAnuncioPublico();
+    }
+
+    private void removerAnuncioPublico() {
+
+        DatabaseReference serviçoRef = FirebaseConfig.getFirebaseDatabase()
+                .child("serviços")
+                .child(getArea())
+                .child(getIdServico());
+
+        serviçoRef.removeValue();
+
     }
 
 
