@@ -7,9 +7,9 @@
     <string name="btn_cadastro_cadastrar">Cadastrar-se</string>
     <string name="txt_home_area">Área</string>
     <string name="txt_home_ofertas">Ofertas de Serviço</string>
-    <string name="txt_home_titulo">Titulo</string>
+    <string name="txt_home_titulo">Título</string>
     <string name="txt_itemServico_descricao">Descrição</string>
-    <string name="txt_itemServico_salario">Salario :</string>
+    <string name="txt_itemServico_salario">Salário :</string>
     <string name="txt_itemServico_valorSalario">R$ 00,00</string>
     <string name="txt_itemServico_vagas">Vagas :</string>
     <string name="txt_itemServico_valorVagas">0</string>

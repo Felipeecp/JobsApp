@@ -1,198 +1,206 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/linearLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
-    android:orientation="vertical"
-    android:padding="16dp"
-    tools:context=".activity.LoginActivity">
+    >
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="16dp"
+        tools:context=".activity.LoginActivity">
 
-    <ImageView
-        android:id="@+id/imgv_logo_login"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:src="@drawable/jobs"
-        app:layout_constraintBottom_toTopOf="@id/txtv_jobsapp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_chainStyle="packed" />
+        <ImageView
+            android:id="@+id/imgv_logo_login"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/jobs"
+            app:layout_constraintBottom_toTopOf="@id/txtv_jobsapp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
 
-    <TextView
-        android:id="@+id/txtv_jobsapp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="JobsApp"
-        android:textColor="@color/NileBlue"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@id/cardView_login"
-        app:layout_constraintEnd_toEndOf="@+id/imgv_logo_login"
-        app:layout_constraintStart_toStartOf="@+id/imgv_logo_login"
-        app:layout_constraintTop_toBottomOf="@+id/imgv_logo_login" />
+        <TextView
+            android:id="@+id/txtv_jobsapp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="JobsApp"
+            android:textColor="@color/NileBlue"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/cardView_login"
+            app:layout_constraintEnd_toEndOf="@+id/imgv_logo_login"
+            app:layout_constraintStart_toStartOf="@+id/imgv_logo_login"
+            app:layout_constraintTop_toBottomOf="@+id/imgv_logo_login" />
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView_login"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        app:cardBackgroundColor="@color/LinkWater"
-        app:cardCornerRadius="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtv_jobsapp">
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView_login"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:cardBackgroundColor="@color/LinkWater"
+            app:cardCornerRadius="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtv_jobsapp">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center">
-
-
-            <TextView
-                android:id="@+id/txtv_login"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="32dp"
-                android:text="Log - in"
-                android:textColor="@color/NileBlue"
-                android:textSize="24sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toTopOf="@+id/txtv_email"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_chainStyle="packed" />
-
-
-            <TextView
-                android:id="@+id/txtv_email"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="24dp"
-                android:text="Email"
-                android:textColor="@color/NileBlue"
-                android:textSize="16sp"
-                app:layout_constraintBottom_toTopOf="@+id/edt_email_login"
-                app:layout_constraintStart_toStartOf="@+id/txtv_login"
-                app:layout_constraintTop_toBottomOf="@+id/txtv_login" />
-
-            <EditText
-                android:id="@+id/edt_email_login"
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="32dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="32dp"
-                android:background="@drawable/bg_edit_text"
-                android:hint="Insira seu login (email cadastrado)"
-                android:inputType="textEmailAddress"
-                android:minHeight="48dp"
-                android:padding="10dp"
-                android:textSize="16dp"
-                app:layout_constraintBottom_toTopOf="@+id/txtv_senha"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtv_email" />
+                android:layout_height="match_parent"
+                android:layout_gravity="center">
 
 
-            <TextView
-                android:id="@+id/txtv_senha"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
-                android:text="Senha"
-                android:textColor="@color/NileBlue"
-                android:textSize="16sp"
-                app:layout_constraintBottom_toTopOf="@+id/edt_senha_login"
-                app:layout_constraintStart_toStartOf="@+id/edt_email_login"
-                app:layout_constraintTop_toBottomOf="@+id/edt_email_login" />
-
-            <EditText
-                android:id="@+id/edt_senha_login"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="32dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="32dp"
-                android:background="@drawable/bg_edit_text"
-                android:hint="Insira sua senha"
-                android:inputType="textPassword"
-                android:minHeight="48dp"
-                android:padding="10dp"
-                app:layout_constraintBottom_toTopOf="@+id/btn_entrar_login"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtv_senha" />
-
-            <Button
-                android:id="@+id/btn_entrar_login"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
-                android:backgroundTint="@color/MediumPurple"
-                android:text="Entrar"
-                app:layout_constraintBottom_toTopOf="@+id/txtv_possuiconta"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/edt_senha_login" />
+                <TextView
+                    android:id="@+id/txtv_login"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="32dp"
+                    android:text="Log - in"
+                    android:textColor="@color/NileBlue"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/txtv_email"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_chainStyle="packed" />
 
 
-            <TextView
-                android:id="@+id/txtv_possuiconta"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
-                android:gravity="center"
-                android:text="Não possui uma conta?"
-                android:textColor="@color/NileBlue"
-                app:layout_constraintBottom_toTopOf="@+id/txtv_cadastrar_login"
-                app:layout_constraintEnd_toEndOf="@+id/btn_entrar_login"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toStartOf="@+id/btn_entrar_login"
-                app:layout_constraintTop_toBottomOf="@+id/btn_entrar_login" />
+                <TextView
+                    android:id="@+id/txtv_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="24dp"
+                    android:text="Email"
+                    android:textColor="@color/NileBlue"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toTopOf="@+id/edt_email_login"
+                    app:layout_constraintStart_toStartOf="@+id/txtv_login"
+                    app:layout_constraintTop_toBottomOf="@+id/txtv_login" />
 
-            <TextView
-                android:id="@+id/txtv_cadastrar_login"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:gravity="center"
-                android:text="Cadastre-se"
-                android:textColor="@color/MediumPurple"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toTopOf="@+id/btn_facebook"
-                app:layout_constraintEnd_toEndOf="@+id/txtv_possuiconta"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toStartOf="@+id/txtv_possuiconta"
-                app:layout_constraintTop_toBottomOf="@+id/txtv_possuiconta" />
-
-            <ImageButton
-                android:id="@+id/btn_facebook"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="24dp"
-                android:background="@drawable/linkwater_btn_background"
-                android:src="@drawable/ic_facebook"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtv_cadastrar_login"
-                tools:ignore="SpeakableTextPresentCheck" />
+                <EditText
+                    android:id="@+id/edt_email_login"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="32dp"
+                    android:background="@drawable/bg_edit_text"
+                    android:hint="Insira seu login (email cadastrado)"
+                    android:inputType="textEmailAddress"
+                    android:minHeight="48dp"
+                    android:padding="10dp"
+                    android:textSize="16dp"
+                    app:layout_constraintBottom_toTopOf="@+id/txtv_senha"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtv_email" />
 
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                <TextView
+                    android:id="@+id/txtv_senha"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:text="Senha"
+                    android:textColor="@color/NileBlue"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toTopOf="@+id/edt_senha_login"
+                    app:layout_constraintStart_toStartOf="@+id/edt_email_login"
+                    app:layout_constraintTop_toBottomOf="@+id/edt_email_login" />
 
-    </androidx.cardview.widget.CardView>
+                <EditText
+                    android:id="@+id/edt_senha_login"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="32dp"
+                    android:background="@drawable/bg_edit_text"
+                    android:hint="Insira sua senha"
+                    android:inputType="textPassword"
+                    android:minHeight="48dp"
+                    android:padding="10dp"
+                    app:layout_constraintBottom_toTopOf="@+id/btn_entrar_login"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtv_senha" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+                <Button
+                    android:id="@+id/btn_entrar_login"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:backgroundTint="@color/MediumPurple"
+                    android:text="Entrar"
+                    app:layout_constraintBottom_toTopOf="@+id/txtv_possuiconta"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edt_senha_login" />
+
+
+                <TextView
+                    android:id="@+id/txtv_possuiconta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:gravity="center"
+                    android:text="Não possui uma conta?"
+                    android:textColor="@color/NileBlue"
+                    app:layout_constraintBottom_toTopOf="@+id/txtv_cadastrar_login"
+                    app:layout_constraintEnd_toEndOf="@+id/btn_entrar_login"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="@+id/btn_entrar_login"
+                    app:layout_constraintTop_toBottomOf="@+id/btn_entrar_login" />
+
+                <TextView
+                    android:id="@+id/txtv_cadastrar_login"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:text="Cadastre-se"
+                    android:textColor="@color/MediumPurple"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/btn_facebook"
+                    app:layout_constraintEnd_toEndOf="@+id/txtv_possuiconta"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="@+id/txtv_possuiconta"
+                    app:layout_constraintTop_toBottomOf="@+id/txtv_possuiconta" />
+
+                <ImageButton
+                    android:id="@+id/btn_facebook"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="24dp"
+                    android:background="@drawable/linkwater_btn_background"
+                    android:src="@drawable/ic_facebook"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtv_cadastrar_login"
+                    tools:ignore="SpeakableTextPresentCheck" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
