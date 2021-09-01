@@ -1,62 +1,225 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="center"
     android:padding="16dp"
     tools:context=".activity.CadastroActivity">
 
 
     <ImageView
-        android:id="@+id/imgv_cadastro_padrao"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:src="@drawable/profile"
-        android:layout_marginBottom="64dp"
-        />
+        android:id="@+id/imgv_logo_cadastro"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/jobs"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/edt_cadastro_nome"
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/txtv_jobsapp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="@string/cadatro_nome"
-        android:background="@drawable/bg_edit_text"
-        android:padding="10dp"
-        android:layout_marginBottom="16dp"
-        android:inputType="textPersonName"
-        />
+        android:layout_marginTop="16dp"
+        android:text="JobsApp"
+        android:textColor="@color/NileBlue"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/imgv_logo_cadastro"
+        app:layout_constraintStart_toStartOf="@+id/imgv_logo_cadastro"
+        app:layout_constraintTop_toBottomOf="@+id/imgv_logo_cadastro" />
 
 
-    <EditText
-        android:id="@+id/edt_cadastro_email"
-        android:layout_width="match_parent"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView_cadastro"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:hint="@string/cadastro_email"
-        android:background="@drawable/bg_edit_text"
-        android:padding="10dp"
-        android:layout_marginBottom="16dp"
-        android:inputType="textEmailAddress"
-        />
+        android:layout_marginTop="16dp"
+        app:cardBackgroundColor="@color/LinkWater"
+        app:cardCornerRadius="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtv_jobsapp">
 
-    <EditText
-        android:id="@+id/edt_cadastro_senha"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/cadastro_senha"
-        android:background="@drawable/bg_edit_text"
-        android:padding="10dp"
-        android:layout_marginBottom="24dp"
-        android:inputType="textPassword"
-        />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center">
 
-    <Button
-        android:id="@+id/btn_cadastrar"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:text="@string/btn_cadastro_cadastrar"
-        />
 
-</LinearLayout>
+            <TextView
+                android:id="@+id/txtv_cadastro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="Cadastre - se, "
+                android:textColor="@color/NileBlue"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txtv_slogan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="encontre vagas de emprego e ofereça serviços."
+                android:textColor="@color/NileBlue"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@+id/txtv_cadastro"
+                app:layout_constraintTop_toBottomOf="@+id/txtv_cadastro" />
+
+            <!-- CAMPOS DE PREENCHIMENTO (NOME, EMAIL, SENHA, CONFIRMA SENHA)  -->
+            <!-- NOME-->
+            <TextView
+                android:id="@+id/txtv_seunome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="16dp"
+                android:text="Seu nome"
+                android:textColor="@color/NileBlue"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@+id/txtv_slogan"
+                app:layout_constraintTop_toBottomOf="@+id/txtv_slogan" />
+
+            <EditText
+                android:id="@+id/edt_cadastro_nome"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_edit_text"
+                android:hint="Informe seu nome completo"
+                android:inputType="textPersonName"
+                android:minHeight="48dp"
+                android:padding="10dp"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@+id/txtv_seunome"
+                app:layout_constraintTop_toBottomOf="@+id/txtv_seunome" />
+
+            <!-- EMAIL -->
+            <TextView
+                android:id="@+id/txtv_seuemail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Seu email"
+                android:textColor="@color/NileBlue"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@+id/edt_cadastro_nome"
+                app:layout_constraintTop_toBottomOf="@+id/edt_cadastro_nome" />
+
+            <EditText
+                android:id="@+id/edt_cadastro_email"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_edit_text"
+                android:hint="Informe seu email (será seu Login)"
+                android:inputType="textEmailAddress"
+                android:minHeight="48dp"
+                android:padding="10dp"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@+id/txtv_seuemail"
+                app:layout_constraintTop_toBottomOf="@+id/txtv_seuemail" />
+
+            <!-- SENHA -->
+            <TextView
+                android:id="@+id/txtv_suasenha"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sua senha"
+                android:textColor="@color/NileBlue"
+                android:textSize="16sp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toStartOf="@+id/edt_cadastro_email"
+                app:layout_constraintTop_toBottomOf="@+id/edt_cadastro_email" />
+
+            <EditText
+                android:id="@+id/edt_senha"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_edit_text"
+                android:hint="Informe uma senha"
+                android:inputType="textPassword"
+                android:minHeight="48dp"
+                android:padding="10dp"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@+id/txtv_suasenha"
+                app:layout_constraintTop_toBottomOf="@+id/txtv_suasenha" />
+
+            <!-- CONFIRMA SENHA -->
+            <TextView
+                android:id="@+id/txtv_confirmasenha"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Confirme sua senha"
+                android:textColor="@color/NileBlue"
+                android:textSize="16sp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toStartOf="@+id/edt_senha"
+                app:layout_constraintTop_toBottomOf="@+id/edt_senha" />
+
+            <EditText
+                android:id="@+id/edt_cadastro_senha"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_edit_text"
+                android:hint="Por favor confirme sua senha"
+                android:inputType="textPassword"
+                android:minHeight="48dp"
+                android:padding="10dp"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@+id/txtv_confirmasenha"
+                app:layout_constraintTop_toBottomOf="@+id/txtv_confirmasenha" />
+            <!--FIM CAMPOS DE PREENCHIMENTO-->
+
+
+            <Button
+                android:id="@+id/btn_cadastrar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:backgroundTint="@color/MediumPurple"
+                android:text="Cadastrar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edt_cadastro_senha" />
+
+            <TextView
+                android:id="@+id/txtv_concordo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="48dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:text="Concordo com os "
+                android:textColor="@color/NileBlue"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_cadastrar" />
+
+            <TextView
+                android:id="@+id/txtv_termos_condicoes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Termos e condições"
+                android:textColor="@color/MediumPurple"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/txtv_concordo"
+                app:layout_constraintTop_toTopOf="@+id/txtv_concordo" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

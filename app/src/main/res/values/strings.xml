@@ -27,9 +27,23 @@
     <string name="txt_quantidade_vagas">Quantidade de vagas</string>
     <string name="btn_cadastrar_oferta">Cadastrar Serviço</string>
 
+<<<<<<< HEAD
     <!--Perfil -->
     <string name="txt_nome_do_perfil">Brenda Carvalho</string>
     <string name="txt_profissao">Profissão: atora, modelo e design</string>
     <string name="txt_avaliacao_usuario">Avaliação do usuário</string>
     <string name="txt_contratar_usuario">Contratar Usuário</string>
+=======
+    <string-array name="tempo_oferta">
+        <item>Diario</item>
+        <item>Semanal</item>
+        <item>Mensal</item>
+    </string-array>
+
+    <string-array name="areas">
+        <item>TI</item>
+        <item>Reforma</item>
+        <item>Design</item>
+    </string-array>
+>>>>>>> a701e87f7cb03d89ed74c07cf9faa40ed2fbf335
 </resources>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.TermosECondicoesActivity">
+
+    <TextView
+        android:id="@+id/txtv_logo_termosecondicoes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Termos e Condições"
+        android:textColor="@color/NileBlue"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView_termosecondicoes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        app:cardBackgroundColor="@color/LinkWater"
+        app:cardCornerRadius="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtv_logo_termosecondicoes" >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center">
+
+            <TextView
+                android:id="@+id/txtv_termo"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|end"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="32dp"
+                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit.Sed aliquam justo a turpis suscipit, in placerat velit venenatis. Suspendisse id interdum risus. Aliquam maximus sapien id nulla semper, sed ultrices augue consequat. Sed leo arcu, aliquam non tempor viverra, posuere vel erat. Etiam pellentesque lectus ultricies tincidunt porttitor. Phasellus quis vulputate ex, ac ultricies elit. Suspendisse potenti. Curabitur leo tortor, semper sit amet leo id, feugiat finibus ante. Integer in est magna. Cras finibus diam a purus vestibulum, vitae accumsan ligula posuere.
+
+        Morbi gravida hendrerit rhoncus. Nulla interdum consectetur ante, eget varius dolor finibus at. Mauris ac arcu at est efficitur lobortis in ac ipsum. Fusce egestas, augue vitae lacinia convallis, nisl nibh tincidunt metus, sed sagittis augue turpis quis ex. Proin quis dui sollicitudin dolor consequat sagittis dignissim id ante. Maecenas in odio at nulla ullamcorper vestibulum. Vivamus tincidunt mi metus, vitae dignissim libero tincidunt id. Pellentesque sollicitudin, est eget ultrices congue, metus ipsum lobortis ligula, sit amet suscipit ante orci eget nibh. "
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/btn_ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:backgroundTint="@color/MediumPurple"
+        android:text="ok"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView_termosecondicoes" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

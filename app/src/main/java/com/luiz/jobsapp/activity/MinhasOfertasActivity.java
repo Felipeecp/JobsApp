@@ -45,7 +45,6 @@ public class MinhasOfertasActivity extends AppCompatActivity {
             }
         });
 
-        this.criarServico();
         adapterOfertas = new AdapterOfertas(servicoList, this);
 
         // Configurando RecyclerView
@@ -54,19 +53,6 @@ public class MinhasOfertasActivity extends AppCompatActivity {
         recyclerOfertas.setLayoutManager(layoutManager);
         recyclerOfertas.setHasFixedSize(true);
         recyclerOfertas.setAdapter(adapterOfertas);
-
-
-    }
-
-    public void criarServico(){
-        Servico servico = new Servico("Programador", "R$ 1000.00", "3");
-        this.servicoList.add( servico );
-
-        Servico servico2 = new Servico("Pintor", "R$ 100.00", "1");
-        this.servicoList.add( servico2 );
-
-        Servico servico3 = new Servico("Design", "R$ 500.00", "1");
-        this.servicoList.add( servico3 );
 
 
     }
