@@ -3,7 +3,9 @@ package com.luiz.jobsapp.model;
 import com.google.firebase.database.DatabaseReference;
 import com.luiz.jobsapp.helper.FirebaseConfig;
 
-public class Servico {
+import java.io.Serializable;
+
+public class Servico implements Serializable {
 
     private String idServico;
     private String titulo;

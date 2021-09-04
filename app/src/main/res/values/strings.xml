@@ -32,6 +32,7 @@
     <string name="txt_profissao">Profissão: atora, modelo e design</string>
     <string name="txt_avaliacao_usuario">Avaliação do usuário</string>
     <string name="txt_contratar_usuario">Contratar Usuário</string>
+    <string name="entrar_em_contato">Entrar em contato</string>
     <string-array name="tempo_oferta">
         <item>Diario</item>
         <item>Semanal</item>

@@ -53,7 +53,7 @@
             android:layout_width="159dp"
             android:layout_height="159dp"
             android:background="#FFFFFF"
-            android:scaleType="centerCrop"
+            android:scaleType="fitCenter"
             android:src="@drawable/pintor" />
     </androidx.cardview.widget.CardView>
 
@@ -62,7 +62,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="16dp"
-        android:text="Pintor Ninja"
+        android:text="Titulo"
         android:textColor="@color/black"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -71,41 +71,32 @@
 
 
     <TextView
-        android:id="@+id/txtv_tempo"
+        android:id="@+id/txtv_tempo_detalhes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="16dp"
+        android:layout_marginStart="32dp"
         android:drawableLeft="@drawable/ic_time_work_24"
-        android:text="Meio Período"
-        app:layout_constraintEnd_toStartOf="@id/txtv_data"
+        tools:text="Tempo"
         app:layout_constraintStart_toEndOf="@id/guideline6Descricao"
         app:layout_constraintTop_toBottomOf="@id/titulo_detalhe_oferta" />
 
-    <TextView
-        android:id="@+id/txtv_data"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:drawableLeft="@drawable/ic_calendar_24"
-        android:text="21-07-2021"
-        app:layout_constraintEnd_toStartOf="@id/txtv_local"
-        app:layout_constraintStart_toEndOf="@id/txtv_tempo"
-        app:layout_constraintTop_toTopOf="@+id/txtv_tempo" />
-
 
     <TextView
-        android:id="@+id/txtv_local"
+        android:id="@+id/txtv_local_detalhe"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:drawableLeft="@drawable/ic_local_24"
-        android:text="São Luís"
+        tools:text="Local"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
         app:layout_constraintEnd_toStartOf="@id/guideline6Descricao2"
-        app:layout_constraintStart_toEndOf="@id/txtv_data"
-        app:layout_constraintTop_toTopOf="@+id/txtv_data" />
+        app:layout_constraintTop_toBottomOf="@+id/titulo_detalhe_oferta" />
 
 
     <TextView
-        android:id="@+id/txtDescricao"
+        android:id="@+id/txtv_Descricao_detalhe"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
@@ -114,7 +105,7 @@
         android:textColor="@color/NileBlue"
         android:textSize="16sp"
         app:layout_constraintStart_toEndOf="@id/guideline6Descricao"
-        app:layout_constraintTop_toBottomOf="@id/txtv_local" />
+        app:layout_constraintTop_toBottomOf="@id/txtv_local_detalhe" />
 
     <TextView
         android:id="@+id/descricao_oferta"
@@ -122,34 +113,98 @@
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
         android:layout_marginTop="24dp"
-        android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s "
+        tools:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s "
         android:textAlignment="gravity"
         android:textColor="@color/NileBlue"
         android:textSize="16sp"
         app:layout_constraintEnd_toStartOf="@id/guideline6Descricao2"
         app:layout_constraintStart_toEndOf="@id/guideline6Descricao"
-        app:layout_constraintTop_toBottomOf="@id/txtDescricao" />
+        app:layout_constraintTop_toBottomOf="@id/txtv_Descricao_detalhe" />
 
     <TextView
         android:id="@+id/salario_oferta"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:textAlignment="gravity"
-        android:paddingTop="10dp"
         android:layout_margin="5dp"
-        android:text="Salário: R$ 500.00"
-        android:textSize="16sp"
+        android:paddingTop="10dp"
+        android:text="Salário:"
+        android:textAlignment="gravity"
         android:textColor="@color/NileBlue"
-        app:layout_constraintEnd_toStartOf="@id/guideline6Descricao2"
+        android:textSize="16sp"
         app:layout_constraintStart_toEndOf="@id/guideline6Descricao"
         app:layout_constraintTop_toBottomOf="@id/descricao_oferta" />
 
+    <TextView
+        android:id="@+id/salario_oferta_valor"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:paddingTop="10dp"
+        tools:text="R$ 500,00"
+        android:textAlignment="gravity"
+        android:textColor="@color/NileBlue"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/salario_oferta"
+        app:layout_constraintTop_toBottomOf="@id/descricao_oferta" />
+
+    <TextView
+        android:id="@+id/qtdVagas_detalhes"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:paddingTop="10dp"
+        android:text="Quantidade de Vagas:"
+        android:textAlignment="gravity"
+        android:textColor="@color/NileBlue"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/guideline6Descricao"
+        app:layout_constraintTop_toBottomOf="@id/salario_oferta" />
+
+    <TextView
+        android:id="@+id/qtdVagas_detalhes_valor"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:paddingTop="10dp"
+        tools:text="1"
+        android:textAlignment="gravity"
+        android:textColor="@color/NileBlue"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/qtdVagas_detalhes"
+        app:layout_constraintTop_toBottomOf="@id/salario_oferta_valor" />
+
+    <TextView
+        android:id="@+id/telefone_detalhes"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:paddingTop="10dp"
+        android:text="Telefone:"
+        android:textAlignment="gravity"
+        android:textColor="@color/NileBlue"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/guideline6Descricao"
+        app:layout_constraintTop_toBottomOf="@id/qtdVagas_detalhes" />
+
+    <TextView
+        android:id="@+id/telefone_detalhes_valor"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:paddingTop="10dp"
+        tools:text="(98) 99999-9999"
+        android:textAlignment="gravity"
+        android:textColor="@color/NileBlue"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/telefone_detalhes"
+        app:layout_constraintTop_toBottomOf="@id/qtdVagas_detalhes_valor" />
+
     <Button
-        android:id="@+id/btn_canditatar"
+        android:id="@+id/btn_contato"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
         android:backgroundTint="@color/Pelorous"
-        android:text="@string/txt_contratar_usuario"
+        android:text="@string/entrar_em_contato"
         app:layout_constraintBottom_toTopOf="@+id/guideline6Descricao4"
         app:layout_constraintEnd_toStartOf="@id/guideline6Descricao2"
         app:layout_constraintHorizontal_bias="0.5"
