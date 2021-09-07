@@ -14,8 +14,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.JobsApp">
         <activity
-            android:name=".activity.PerfilActivicty"
-            android:exported="true"/>
+            android:name=".activity.CadastroDadosPerfilActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.PerfilActivity"
+            android:exported="true" />
         <activity
             android:name=".activity.TermosECondicoesActivity"
             android:exported="true" />

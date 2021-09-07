@@ -211,6 +211,9 @@ public class HomeActivity extends AppCompatActivity {
             case R.id.menu_home_minhas_ofertas:
                 startActivity(new Intent(HomeActivity.this, MinhasOfertasActivity.class));
                 break;
+            case R.id.menu_home_perfil:
+                startActivity(new Intent(HomeActivity.this, PerfilActivity.class));
+                break;
         }
 
         return super.onOptionsItemSelected(item);

@@ -29,7 +29,7 @@
 
     <!--Perfil -->
     <string name="txt_nome_do_perfil">Nome do Usuario</string>
-    <string name="txt_profissao">Profissão:</string>
+    <string name="txt_profissao">Profissão</string>
     <string name="txt_avaliacao_usuario">Avaliação do usuário</string>
     <string name="txt_contratar_usuario">Contratar Usuário</string>
     <string name="entrar_em_contato">Entrar em contato</string>
@@ -40,6 +40,7 @@
     <string name="telefone_detalhes">Telefone:</string>
     <string name="menu_txt_minhas_ofertas">Minhas Ofertas</string>
     <string name="menu_txt_perfil">Perfil</string>
+    <string name="adicionar_dados_btn_perfil">Adicionar Dados</string>
     <string-array name="tempo_oferta">
         <item>Diario</item>
         <item>Semanal</item>
