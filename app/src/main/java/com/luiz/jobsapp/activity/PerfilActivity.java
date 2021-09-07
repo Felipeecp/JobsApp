@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
@@ -90,7 +91,10 @@ public class PerfilActivity extends AppCompatActivity {
                     txtExperiencias.setText(dadosUser.getExperiencia());
                     txtTempo.setText(dadosUser.getTempo());
                 } else {
-                    System.out.println("Snapshot não existe");
+                    Toast.makeText(getApplicationContext(),
+                            "Atenção, adicione seus dados",
+                            Toast.LENGTH_LONG)
+                            .show();
                 }
             }
 
