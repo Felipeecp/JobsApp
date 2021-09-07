@@ -6,6 +6,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/LinkWater"
     >
 
 <androidx.constraintlayout.widget.ConstraintLayout
@@ -51,7 +52,6 @@
         android:layout_height="wrap_content"
         android:backgroundTint="@color/FundoPadrão"
         android:text="Área"
-
         android:textColor="@color/Grey"
         app:layout_constraintBottom_toTopOf="@id/view_line_2"
         app:layout_constraintEnd_toEndOf="parent"
@@ -92,17 +92,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtv_servicos"
         tools:listitem="@layout/item_servico" />
-
-    <!--    <com.google.android.material.bottomnavigation.BottomNavigationView-->
-    <!--        android:id="@+id/btm_navbar"-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        app:backgroundTint="#fff"-->
-    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
-    <!--        app:layout_constraintStart_toStartOf="parent"-->
-    <!--        app:layout_constraintEnd_toEndOf="parent"-->
-    <!--        app:menu="@menu/btm_navigation_menu"-->
-    <!--        />-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

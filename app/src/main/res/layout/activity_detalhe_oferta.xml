@@ -42,7 +42,7 @@
         android:id="@+id/img_detalhes_oferta"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        app:cardCornerRadius="150dp"
+        app:cardCornerRadius="50dp"
         android:layout_marginTop="32dp"
         app:layout_constraintStart_toEndOf="@id/guideline6Descricao"
         app:layout_constraintEnd_toStartOf="@id/guideline6Descricao2"
@@ -62,7 +62,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="16dp"
-        android:text="Titulo"
+        android:text="@string/titulo_detalhes"
         android:textColor="@color/black"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -77,22 +77,22 @@
         android:layout_gravity="center"
         android:layout_marginTop="16dp"
         android:layout_marginStart="32dp"
-        android:drawableLeft="@drawable/ic_time_work_24"
         tools:text="Tempo"
         app:layout_constraintStart_toEndOf="@id/guideline6Descricao"
-        app:layout_constraintTop_toBottomOf="@id/titulo_detalhe_oferta" />
+        app:layout_constraintTop_toBottomOf="@id/titulo_detalhe_oferta"
+        app:drawableLeftCompat="@drawable/ic_time_work_24" />
 
 
     <TextView
         android:id="@+id/txtv_local_detalhe"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:drawableLeft="@drawable/ic_local_24"
         tools:text="Local"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="32dp"
         app:layout_constraintEnd_toStartOf="@id/guideline6Descricao2"
-        app:layout_constraintTop_toBottomOf="@+id/titulo_detalhe_oferta" />
+        app:layout_constraintTop_toBottomOf="@+id/titulo_detalhe_oferta"
+        app:drawableLeftCompat="@drawable/ic_local_24" />
 
 
     <TextView
@@ -101,7 +101,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:padding="5dp"
-        android:text="Descrição: "
+        android:text="@string/descricao_detalhes"
+        android:textStyle="bold"
         android:textColor="@color/NileBlue"
         android:textSize="16sp"
         app:layout_constraintStart_toEndOf="@id/guideline6Descricao"
@@ -127,7 +128,8 @@
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
         android:paddingTop="10dp"
-        android:text="Salário:"
+        android:text="@string/salario_detalhes"
+        android:textStyle="bold"
         android:textAlignment="gravity"
         android:textColor="@color/NileBlue"
         android:textSize="16sp"
@@ -153,7 +155,8 @@
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
         android:paddingTop="10dp"
-        android:text="Quantidade de Vagas:"
+        android:text="@string/quantidade_de_vagas_detalhes"
+        android:textStyle="bold"
         android:textAlignment="gravity"
         android:textColor="@color/NileBlue"
         android:textSize="16sp"
@@ -179,7 +182,8 @@
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
         android:paddingTop="10dp"
-        android:text="Telefone:"
+        android:text="@string/telefone_detalhes"
+        android:textStyle="bold"
         android:textAlignment="gravity"
         android:textColor="@color/NileBlue"
         android:textSize="16sp"
