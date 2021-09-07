@@ -1,4 +1,8 @@
 <resources>
+    <!-- Facebook   -->
+    <string name="facebook_app_id">163148279213195</string>
+    <string name="fb_login_protocol_scheme">fb163148279213195</string>
+
     <string name="app_name">Jobs</string>
     <string name="home_main_text">Encontre um Serviço</string>
     <string name="cadatro_nome">Nome</string>
