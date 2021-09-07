@@ -36,10 +36,11 @@
 
             <TextView
                 android:id="@+id/txtv_titulo_servico"
-                android:layout_width="wrap_content"
+                android:layout_width="130dp"
                 android:layout_height="wrap_content"
                 android:textColor="@color/NileBlue"
                 android:textSize="16sp"
+                android:gravity="center"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@id/imgv_servico"
                 app:layout_constraintHorizontal_bias="0.5"

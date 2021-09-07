@@ -30,7 +30,6 @@ import com.luiz.jobsapp.helper.RecyclerItemClickListener;
 import com.luiz.jobsapp.model.Servico;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
@@ -209,8 +208,11 @@ public class HomeActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
 
         switch (item.getItemId()){
-            case R.id.home_perfil_top:
+            case R.id.menu_home_minhas_ofertas:
                 startActivity(new Intent(HomeActivity.this, MinhasOfertasActivity.class));
+                break;
+            case R.id.menu_home_perfil:
+                startActivity(new Intent(HomeActivity.this, PerfilActivity.class));
                 break;
         }
 
