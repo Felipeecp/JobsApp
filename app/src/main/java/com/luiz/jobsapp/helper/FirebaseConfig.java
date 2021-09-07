@@ -37,8 +37,7 @@ public class FirebaseConfig {
     }
 
     public static String getIdUsuario(){
-        String emailUsuario = referenciaAutenticacao.getCurrentUser().getEmail();
-        String idUsuario = Base64Custom.codificarBase64(emailUsuario);
-        return idUsuario;
+        FirebaseAuth autenticacao = getFirebaseAuth();
+        return autenticacao.getCurrentUser().getUid();
     }
 }

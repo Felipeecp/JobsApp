@@ -3,19 +3,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
 
     <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
+        android:layout_width="400dp"
         android:layout_height="190dp"
         android:layout_margin="8dp"
-        app:cardCornerRadius="20dp"
         android:elevation="10dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:cardCornerRadius="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        >
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -25,9 +25,9 @@
                 android:id="@+id/imgv_servico"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
+                android:layout_marginStart="32dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="16dp"
-                android:layout_marginStart="32dp"
                 app:layout_constraintBottom_toTopOf="@+id/txtv_titulo_servico"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
@@ -38,13 +38,14 @@
                 android:id="@+id/txtv_titulo_servico"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                tools:text="@string/txt_home_titulo"
+                android:textColor="@color/NileBlue"
                 android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@id/imgv_servico"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="@id/imgv_servico"
-                app:layout_constraintTop_toBottomOf="@+id/imgv_servico" />
+                app:layout_constraintTop_toBottomOf="@+id/imgv_servico"
+                tools:text="@string/txt_home_titulo" />
 
             <TextView
                 android:id="@+id/txtv_descricao_servico"
@@ -52,7 +53,8 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
                 android:text="@string/txt_itemServico_descricao"
-                android:textSize="20sp"
+                android:textColor="@color/NileBlue"
+                android:textSize="18sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -61,10 +63,11 @@
                 android:id="@+id/txtv_salario_servico"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="64dp"
                 android:layout_marginStart="32dp"
+                android:layout_marginTop="16dp"
                 android:text="@string/txt_itemServico_salario"
-                android:textSize="20sp"
+                android:textColor="@color/NileBlue"
+                android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="@+id/imgv_servico"
                 app:layout_constraintStart_toEndOf="@+id/imgv_servico"
@@ -76,20 +79,22 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
-                tools:text="@string/txt_itemServico_valorSalario"
-                android:textSize="20sp"
+                android:textColor="@color/NileBlue"
+                android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="@id/txtv_salario_servico"
                 app:layout_constraintStart_toEndOf="@id/txtv_salario_servico"
-                app:layout_constraintTop_toTopOf="@id/txtv_salario_servico" />
+                app:layout_constraintTop_toTopOf="@id/txtv_salario_servico"
+                tools:text="@string/txt_itemServico_valorSalario" />
 
             <TextView
                 android:id="@+id/txtv_vagas_servico"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
                 android:layout_marginStart="32dp"
+                android:layout_marginTop="12dp"
                 android:text="@string/txt_itemServico_vagas"
-                android:textSize="20sp"
+                android:textColor="@color/NileBlue"
+                android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toEndOf="@+id/imgv_servico"
                 app:layout_constraintTop_toBottomOf="@+id/txtv_salario_servico" />
@@ -99,12 +104,36 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
-                tools:text="@string/txt_itemServico_valorVagas"
-                android:textSize="20sp"
+                android:textColor="@color/NileBlue"
+                android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="@+id/txtv_vagas_servico"
                 app:layout_constraintStart_toEndOf="@+id/txtv_vagas_servico"
-                app:layout_constraintTop_toTopOf="@+id/txtv_vagas_servico" />
+                app:layout_constraintTop_toTopOf="@+id/txtv_vagas_servico"
+                tools:text="@string/txt_itemServico_valorVagas" />
 
+            <TextView
+                android:id="@+id/txtv_local_servico"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Local :"
+                android:textColor="@color/NileBlue"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/txtv_vagas_servico"
+                app:layout_constraintTop_toBottomOf="@+id/txtv_vagas_servico" />
+
+            <TextView
+                android:id="@+id/txtv_local_valor_servico"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:textColor="@color/NileBlue"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/txtv_local_servico"
+                app:layout_constraintStart_toEndOf="@+id/txtv_local_servico"
+                app:layout_constraintTop_toTopOf="@+id/txtv_local_servico"
+                tools:text="Cidade" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
 

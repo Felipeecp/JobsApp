@@ -14,15 +14,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.JobsApp">
         <activity
+            android:name=".activity.PerfilActivicty"
+            android:exported="true"/>
+        <activity
+            android:name=".activity.TermosECondicoesActivity"
+            android:exported="true" />
+        <activity
             android:name=".activity.MinhasOfertasActivity"
             android:exported="true"
             android:label="@string/title_activity_minhas_ofertas"
             android:theme="@style/Theme.JobsApp.NoActionBar" />
         <activity
             android:name=".activity.DetalheOfertaActivity"
-            android:exported="true" />
-        <activity
-            android:name=".activity.DetalhesActivity"
             android:exported="true" />
         <activity
             android:name=".activity.HomeActivity"

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">JobsApp</string>
+    <string name="app_name">Jobs</string>
     <string name="home_main_text">Encontre um Serviço</string>
     <string name="cadatro_nome">Nome</string>
     <string name="cadastro_email">Email</string>
@@ -7,14 +7,14 @@
     <string name="btn_cadastro_cadastrar">Cadastrar-se</string>
     <string name="txt_home_area">Área</string>
     <string name="txt_home_ofertas">Ofertas de Serviço</string>
-    <string name="txt_home_titulo">Titulo</string>
+    <string name="txt_home_titulo">Título</string>
     <string name="txt_itemServico_descricao">Descrição</string>
-    <string name="txt_itemServico_salario">Salario :</string>
+    <string name="txt_itemServico_salario">Salário :</string>
     <string name="txt_itemServico_valorSalario">R$ 00,00</string>
     <string name="txt_itemServico_vagas">Vagas :</string>
     <string name="txt_itemServico_valorVagas">0</string>
     <string name="txtv_detalhes_da_oferta">Detalhes da Oferta</string>
-    <string name="title_activity_minhas_ofertas">MinhasOfertasActivity</string>
+    <string name="title_activity_minhas_ofertas">Minhas Ofertas</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>
@@ -23,7 +23,25 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
-    <string name="txt_cadastrar_oferta_de_serviço" >Cadastrar Oferta de Serviço</string>
+    <string name="txt_cadastrar_oferta_de_serviço">Cadastrar Oferta de Serviço</string>
     <string name="txt_quantidade_vagas">Quantidade de vagas</string>
     <string name="btn_cadastrar_oferta">Cadastrar Serviço</string>
+
+    <!--Perfil -->
+    <string name="txt_nome_do_perfil">Brenda Carvalho</string>
+    <string name="txt_profissao">Profissão: atora, modelo e design</string>
+    <string name="txt_avaliacao_usuario">Avaliação do usuário</string>
+    <string name="txt_contratar_usuario">Contratar Usuário</string>
+    <string name="entrar_em_contato">Entrar em contato</string>
+    <string-array name="tempo_oferta">
+        <item>Diario</item>
+        <item>Semanal</item>
+        <item>Mensal</item>
+    </string-array>
+
+    <string-array name="areas">
+        <item>TI</item>
+        <item>Reforma</item>
+        <item>Design</item>
+    </string-array>
 </resources>

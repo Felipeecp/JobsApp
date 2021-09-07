@@ -17,6 +17,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
 import com.google.firebase.auth.FirebaseAuthInvalidUserException;
+import com.google.firebase.auth.FirebaseUser;
 import com.luiz.jobsapp.R;
 import com.luiz.jobsapp.helper.FirebaseConfig;
 import com.luiz.jobsapp.model.Usuario;
@@ -35,6 +36,8 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        startActivity(new Intent(LoginActivity.this, HomeActivity.class));
 
         inicializarComponentes();
 
@@ -71,7 +74,10 @@ public class LoginActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
-                            abrirHome();
+                            FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+                            if (user != null) {
+                                abrirHome();
+                            }
                         }else{
                             String excecao = "";
                             try{
