@@ -68,6 +68,7 @@ public class LoginActivity extends AppCompatActivity {
         inicializarFirebaseCallBack();
         clickButtonFacebook();
 
+
         // Initialize Facebook Login button
         FacebookSdk.sdkInitialize(getApplicationContext());
 

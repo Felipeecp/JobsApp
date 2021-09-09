@@ -33,6 +33,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import dmax.dialog.SpotsDialog;
+
 public class HomeActivity extends AppCompatActivity {
 
     private List<Servico> servicoList = new ArrayList<>();
@@ -43,6 +45,7 @@ public class HomeActivity extends AppCompatActivity {
     private boolean filtrandoPorArea = false;
     private DatabaseReference servicosPublicosRef;
     private Button btnArea;
+    private android.app.AlertDialog dialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -107,6 +110,13 @@ public class HomeActivity extends AppCompatActivity {
 
     // Recupera anuncios do firebase para exibir utilizando recyclerView
     public void recuperarAnunciosPublicos(){
+
+        dialog = new SpotsDialog.Builder().setContext(this)
+                .setMessage("Carregando Anúncios")
+                .setCancelable(false)
+                .build();
+        dialog.show();
+
         servicoList.clear();
         servicosPublicosRef.addValueEventListener(new ValueEventListener() {
             @Override
@@ -119,6 +129,7 @@ public class HomeActivity extends AppCompatActivity {
                 }
                 Collections.reverse(servicoList);
                 adapterOfertas.notifyDataSetChanged();
+                dialog.dismiss();
             }
 
             @Override
@@ -154,6 +165,7 @@ public class HomeActivity extends AppCompatActivity {
                 filtroArea = spinnerArea.getSelectedItem().toString();
                 recuperarAnunciosPorArea();
                 filtrandoPorArea = true;
+
             }
         });
 
@@ -213,6 +225,10 @@ public class HomeActivity extends AppCompatActivity {
                 break;
             case R.id.menu_home_perfil:
                 startActivity(new Intent(HomeActivity.this, PerfilActivity.class));
+                break;
+            case R.id.menu_home_sair:
+                autenticacao.signOut();
+                invalidateOptionsMenu();
                 break;
         }
 

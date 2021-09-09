@@ -7,36 +7,41 @@
     tools:context=".activity.DetalheOfertaActivity"
     >
 
-    <ImageView
-        android:id="@+id/backOferta"
-        android:layout_width="wrap_content"
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar_detalhes"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        app:layout_constraintStart_toEndOf="@+id/guideline6Descricao"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_voltar_30" />
+        android:theme="@style/Theme.JobsApp.AppBarOverlay"
+        app:layout_constraintBottom_toTopOf="@id/img_detalhes_oferta"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-    <TextView
-        android:id="@+id/text_oferta"
-        android:layout_width="wrap_content"
-        android:layout_height="30dp"
-        android:layout_marginTop="32dp"
-        android:text="@string/txtv_detalhes_da_oferta"
-        android:textColor="@color/NileBlue"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@+id/favoritar"
-        app:layout_constraintStart_toEndOf="@+id/backOferta"
-        app:layout_constraintTop_toTopOf="parent" />
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_detalhes"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/white"
+            android:gravity="center"
+            android:layout_gravity="center"
+            app:theme="@style/ThemeOverlay.AppCompat.Light"
+            android:elevation="0dp"
+            >
 
-    <ImageView
-        android:id="@+id/favoritar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        app:layout_constraintEnd_toStartOf="@+id/guideline6Descricao2"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_favorite_oferta" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Detalhes da Oferta"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:layout_marginEnd="60dp"
+                android:textStyle="bold"
+                android:gravity="center"
+                />
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/img_detalhes_oferta"
@@ -46,7 +51,7 @@
         android:layout_marginTop="32dp"
         app:layout_constraintStart_toEndOf="@id/guideline6Descricao"
         app:layout_constraintEnd_toStartOf="@id/guideline6Descricao2"
-        app:layout_constraintTop_toBottomOf="@+id/text_oferta">
+        app:layout_constraintTop_toBottomOf="@+id/app_bar_detalhes">
 
         <ImageView
             android:id="@+id/detalhes_oferta_IMG"
@@ -104,7 +109,7 @@
         android:text="@string/descricao_detalhes"
         android:textStyle="bold"
         android:textColor="@color/NileBlue"
-        android:textSize="16sp"
+        android:textSize="20sp"
         app:layout_constraintStart_toEndOf="@id/guideline6Descricao"
         app:layout_constraintTop_toBottomOf="@id/txtv_local_detalhe" />
 
@@ -117,7 +122,7 @@
         tools:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s "
         android:textAlignment="gravity"
         android:textColor="@color/NileBlue"
-        android:textSize="16sp"
+        android:textSize="18sp"
         app:layout_constraintEnd_toStartOf="@id/guideline6Descricao2"
         app:layout_constraintStart_toEndOf="@id/guideline6Descricao"
         app:layout_constraintTop_toBottomOf="@id/txtv_Descricao_detalhe" />
@@ -132,7 +137,7 @@
         android:textStyle="bold"
         android:textAlignment="gravity"
         android:textColor="@color/NileBlue"
-        android:textSize="16sp"
+        android:textSize="20sp"
         app:layout_constraintStart_toEndOf="@id/guideline6Descricao"
         app:layout_constraintTop_toBottomOf="@id/descricao_oferta" />
 
@@ -145,7 +150,7 @@
         tools:text="R$ 500,00"
         android:textAlignment="gravity"
         android:textColor="@color/NileBlue"
-        android:textSize="16sp"
+        android:textSize="18sp"
         app:layout_constraintStart_toEndOf="@id/salario_oferta"
         app:layout_constraintTop_toBottomOf="@id/descricao_oferta" />
 
@@ -159,7 +164,7 @@
         android:textStyle="bold"
         android:textAlignment="gravity"
         android:textColor="@color/NileBlue"
-        android:textSize="16sp"
+        android:textSize="20sp"
         app:layout_constraintStart_toEndOf="@id/guideline6Descricao"
         app:layout_constraintTop_toBottomOf="@id/salario_oferta" />
 
@@ -172,7 +177,7 @@
         tools:text="1"
         android:textAlignment="gravity"
         android:textColor="@color/NileBlue"
-        android:textSize="16sp"
+        android:textSize="20sp"
         app:layout_constraintStart_toEndOf="@id/qtdVagas_detalhes"
         app:layout_constraintTop_toBottomOf="@id/salario_oferta_valor" />
 
@@ -186,7 +191,7 @@
         android:textStyle="bold"
         android:textAlignment="gravity"
         android:textColor="@color/NileBlue"
-        android:textSize="16sp"
+        android:textSize="20sp"
         app:layout_constraintStart_toEndOf="@id/guideline6Descricao"
         app:layout_constraintTop_toBottomOf="@id/qtdVagas_detalhes" />
 
@@ -199,7 +204,7 @@
         tools:text="(98) 99999-9999"
         android:textAlignment="gravity"
         android:textColor="@color/NileBlue"
-        android:textSize="16sp"
+        android:textSize="20sp"
         app:layout_constraintStart_toEndOf="@id/telefone_detalhes"
         app:layout_constraintTop_toBottomOf="@id/qtdVagas_detalhes_valor" />
 
@@ -230,12 +235,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.90" />
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline6Descricao3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.05" />
+
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline6Descricao4"
         android:layout_width="wrap_content"

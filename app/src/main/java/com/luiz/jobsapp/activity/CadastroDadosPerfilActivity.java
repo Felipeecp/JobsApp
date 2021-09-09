@@ -64,18 +64,14 @@ public class CadastroDadosPerfilActivity extends AppCompatActivity implements Vi
         btnSalvarDados.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String profissao = edtProfissao.getText().toString();
-                String formacao = edtFormacao.getText().toString();
-                String experiencia = edtExperiencias.getText().toString();
-                String tempo = edtTempo.getText().toString();
 
-                if (validarComponentes(profissao, formacao, experiencia, tempo)) {
-                    salvarDados(profissao, formacao, experiencia, tempo, caminhoImagem);
+                if (caminhoImagem != null) {
+                    salvarFoto(caminhoImagem);
                     finish();
                 } else {
                     Toast.makeText(
                             getApplicationContext(),
-                            "Preencha todos os campos !!!",
+                            "Necessário uma imagem",
                             Toast.LENGTH_LONG
                     ).show();
                 }
@@ -84,6 +80,55 @@ public class CadastroDadosPerfilActivity extends AppCompatActivity implements Vi
     }
 
 
+    private void salvarFoto(String caminhoImagem){
+
+        final StorageReference imagemPerfil = storage
+                .child("imagens")
+                .child("fotosPerfil")
+                .child(autenticacao.getUid())
+                .child("imagem");
+
+
+        UploadTask uploadTask = imagemPerfil.putFile(Uri.parse(this.caminhoImagem));
+        uploadTask.addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+            @Override
+            public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                imagemPerfil.getDownloadUrl().addOnCompleteListener(new OnCompleteListener<Uri>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Uri> task) {
+                        Uri firebaseUrl = task.getResult();
+                        String urlConvertida = firebaseUrl.toString();
+                        if(urlConvertida != null){
+                            String profissao = edtProfissao.getText().toString();
+                            String formacao = edtFormacao.getText().toString();
+                            String experiencia = edtExperiencias.getText().toString();
+                            String tempo = edtTempo.getText().toString();
+
+                            if (validarComponentes(profissao, formacao, experiencia, tempo)) {
+                                salvarDados(profissao, formacao, experiencia, tempo, urlConvertida);
+                                finish();
+                            } else {
+                                Toast.makeText(
+                                        getApplicationContext(),
+                                        "Preencha todos os campos !!!",
+                                        Toast.LENGTH_LONG
+                                ).show();
+                            }
+
+                        }
+                    }
+                });
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                Toast.makeText(CadastroDadosPerfilActivity.this,
+                        "Falha ao fazer upload",
+                        Toast.LENGTH_SHORT).show();
+            }
+        });
+
+    }
 
     private void inicializarComponentes(){
 
@@ -113,35 +158,6 @@ public class CadastroDadosPerfilActivity extends AppCompatActivity implements Vi
     private void salvarDados(String profissao, String formacao, String experiencia, String tempo, String caminhoImagem){
         Map<String, Object> dadosParaSalvar = new HashMap<>();
 
-        final StorageReference imagemPerfil = storage
-                .child("imagens")
-                .child("fotosPerfil")
-                .child(autenticacao.getUid())
-                .child("imagem");
-
-        UploadTask uploadTask = imagemPerfil.putFile(Uri.parse(caminhoImagem));
-        uploadTask.addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
-            @Override
-            public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                imagemPerfil.getDownloadUrl().addOnCompleteListener(new OnCompleteListener<Uri>() {
-                    @Override
-                    public void onComplete(@NonNull Task<Uri> task) {
-                        Uri firebaseUrl = task.getResult();
-                        String urlConvertida = firebaseUrl.toString();
-                        if(urlConvertida != null){
-                            dadosParaSalvar.put("foto", urlConvertida);
-                        }
-                    }
-                });
-            }
-        }).addOnFailureListener(new OnFailureListener() {
-            @Override
-            public void onFailure(@NonNull Exception e) {
-                Toast.makeText(CadastroDadosPerfilActivity.this,
-                        "Falha ao fazer upload",
-                        Toast.LENGTH_SHORT).show();
-            }
-        });
 
         dadosParaSalvar.put("foto", caminhoImagem);
         dadosParaSalvar.put("profissao", profissao);

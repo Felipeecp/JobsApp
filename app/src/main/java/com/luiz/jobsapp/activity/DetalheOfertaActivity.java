@@ -2,7 +2,9 @@ package com.luiz.jobsapp.activity;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
@@ -30,11 +32,17 @@ public class DetalheOfertaActivity extends AppCompatActivity {
     private DatabaseReference meusServicosRef;
     private FirebaseAuth autenticacao;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detalhe_oferta);
 
+        Toolbar myToolbar = findViewById(R.id.toolbar_detalhes);
+        setSupportActionBar(myToolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
         inicializarComponentes();
 
         servicoSelecionado = (Servico) getIntent().getSerializableExtra("servicoSelecionado");
@@ -55,6 +63,17 @@ public class DetalheOfertaActivity extends AppCompatActivity {
         }
 
         ativarBotao();
+        btnContato.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                visualizarTelefone(v);
+            }
+        });
+    }
+
+    private void visualizarTelefone(View v) {
+        Intent i = new Intent(Intent.ACTION_DIAL, Uri.fromParts("tel", servicoSelecionado.getTelefone(), null));
+        startActivity(i);
     }
 
     private void inicializarComponentes(){

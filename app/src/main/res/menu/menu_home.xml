@@ -14,5 +14,9 @@
         android:title="@string/menu_txt_perfil"
         />
 
+    <item
+        android:id="@+id/menu_home_sair"
+        android:title="@string/txt_sair"
+        />
 
 </menu>

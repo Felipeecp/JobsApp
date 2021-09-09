@@ -45,6 +45,7 @@
     <string name="menu_txt_minhas_ofertas">Minhas Ofertas</string>
     <string name="menu_txt_perfil">Perfil</string>
     <string name="adicionar_dados_btn_perfil">Adicionar Dados</string>
+    <string name="txt_sair">Sair</string>
     <string-array name="tempo_oferta">
         <item>Diario</item>
         <item>Semanal</item>
@@ -55,5 +56,6 @@
         <item>TI</item>
         <item>Reforma</item>
         <item>Design</item>
+        <item>Todas</item>
     </string-array>
 </resources>
