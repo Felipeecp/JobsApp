@@ -5,9 +5,17 @@ public class Dados{
     private String formacao;
     private String experiencia;
     private String tempo;
+    private String foto;
 
     public Dados(){}
 
+    public String getFoto() {
+        return foto;
+    }
+
+    public void setFoto(String foto) {
+        this.foto = foto;
+    }
 
     public String getProfissao() {
         return profissao;
@@ -44,6 +52,7 @@ public class Dados{
     @Override
     public String toString() {
         return "Dados{" +
+                "foto='" + foto + '\'' +
                 "profissao='" + profissao + '\'' +
                 ", formacao='" + formacao + '\'' +
                 ", experiencia='" + experiencia + '\'' +

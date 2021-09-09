@@ -1,13 +1,22 @@
 package com.luiz.jobsapp.activity;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.Manifest;
+import android.app.Activity;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -18,13 +27,17 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.ValueEventListener;
 import com.luiz.jobsapp.R;
 import com.luiz.jobsapp.helper.FirebaseConfig;
+import com.luiz.jobsapp.helper.Permissoes;
 import com.luiz.jobsapp.model.Dados;
 import com.luiz.jobsapp.model.Servico;
 import com.luiz.jobsapp.model.Usuario;
+import com.squareup.picasso.Picasso;
 
 public class PerfilActivity extends AppCompatActivity {
-    TextView txtNome, txtProfissao, txtFormacao, txtExperiencias, txtTempo;
+    private TextView txtNome, txtProfissao, txtFormacao, txtExperiencias, txtTempo;
     private Button btnAdicionarDados;
+    private ImageView imagemPerfil;
+
     private DatabaseReference perfilRef = FirebaseConfig.getFirebaseDatabase()
                                                             .getRef().child("usuarios");
     private FirebaseAuth usuario = FirebaseAuth.getInstance();
@@ -35,6 +48,7 @@ public class PerfilActivity extends AppCompatActivity {
         setContentView(R.layout.activity_perfil);
 
         inicializarComponentes();
+
 
         PegarDados();
 
@@ -55,6 +69,7 @@ public class PerfilActivity extends AppCompatActivity {
         txtFormacao = findViewById(R.id.txtValorFormacaoDoUsuario);
         txtExperiencias = findViewById(R.id.txtValorExperienciasDoUsuario);
         txtTempo = findViewById(R.id.txtValorTempoUsuario);
+        imagemPerfil = findViewById(R.id.imagemPerfil);
 
     }
 
@@ -90,6 +105,11 @@ public class PerfilActivity extends AppCompatActivity {
                     txtFormacao.setText(dadosUser.getFormacao());
                     txtExperiencias.setText(dadosUser.getExperiencia());
                     txtTempo.setText(dadosUser.getTempo());
+
+                    String urlString = dadosUser.getFoto();
+                    Picasso.get().load(urlString).into(imagemPerfil);
+
+
                 } else {
                     Toast.makeText(getApplicationContext(),
                             "Atenção, adicione seus dados",
@@ -101,9 +121,9 @@ public class PerfilActivity extends AppCompatActivity {
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
 
-
             }
         });
     }
+
 
 }

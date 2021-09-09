@@ -13,8 +13,6 @@ public class Usuario {
     public Usuario() {
     }
 
-
-
     public void salvarUsuario() {
         DatabaseReference firebase = FirebaseConfig.getFirebaseDatabase();
         firebase.child("usuarios")

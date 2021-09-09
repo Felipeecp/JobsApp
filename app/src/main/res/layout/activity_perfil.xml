@@ -1,165 +1,176 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.PerfilActivity"
     >
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardImagemPerfil"
-        android:layout_width="wrap_content"
-        android:layout_height="200dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <ImageView
-            android:id="@+id/imagemPerfil"
-            android:layout_width="wrap_content"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activity.PerfilActivity"
+        >
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardImagemPerfil"
+            android:layout_width="200dp"
             android:layout_height="200dp"
-            android:background="#FFFFFF"
-            android:scaleType="fitCenter"
-            android:src="@drawable/perfil_profile" />
-    </androidx.cardview.widget.CardView>
+            app:cardCornerRadius="50dp"
+            android:layout_marginTop="32dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            >
 
-    <TextView
-        android:id="@+id/txtNomeDoUsuario"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingTop="10dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/txt_nome_do_perfil"
-        android:textStyle="bold"
-        android:textColor="@color/black"
-        android:textSize="24sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardImagemPerfil" />
+            <ImageView
+                android:id="@+id/imagemPerfil"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/perfil_profile" />
+        </androidx.cardview.widget.CardView>
 
-    <TextView
-        android:id="@+id/txtProfissaoDoUsuario"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:layout_marginStart="32dp"
-        android:padding="10dp"
-        android:text="@string/txt_profissao"
-        android:textStyle="bold"
-        android:textColor="@color/Grey"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtNomeDoUsuario" />
+        <TextView
+            android:id="@+id/txtNomeDoUsuario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/txt_nome_do_perfil"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardImagemPerfil" />
 
-    <TextView
-        android:id="@+id/txtv_profissao_usuario_valor"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginEnd="40dp"
-        android:padding="10dp"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txtProfissaoDoUsuario"
-        tools:text="Desenvolvedor Web"
-        />
+        <TextView
+            android:id="@+id/txtProfissaoDoUsuario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginStart="32dp"
+            android:padding="10dp"
+            android:text="@string/txt_profissao"
+            android:textStyle="bold"
+            android:textColor="@color/Grey"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtNomeDoUsuario" />
 
-
-    <TextView
-        android:id="@+id/txtFormacaoDoUsuario"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:padding="10dp"
-        android:text="Formação"
-        android:textStyle="bold"
-        android:textColor="@color/Grey"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtv_profissao_usuario_valor" />
-
-    <TextView
-        android:id="@+id/txtValorFormacaoDoUsuario"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginEnd="40dp"
-        android:padding="10dp"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txtFormacaoDoUsuario"
-        tools:text="Graduação em Engenharia de Computação"
-        />
-
-    <TextView
-        android:id="@+id/txtExperienciasDoUsuario"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:padding="10dp"
-        android:text="Experiências"
-        android:textColor="@color/Grey"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txtValorFormacaoDoUsuario"
-        />
-
-    <TextView
-        android:id="@+id/txtValorExperienciasDoUsuario"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginEnd="40dp"
-        android:padding="10dp"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txtExperienciasDoUsuario"
-        tools:text="Desenvolvedor Web Junior na Empresa X" />
-
-    <TextView
-        android:id="@+id/txtTempoUsuario"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:padding="10dp"
-        android:text="Tempo na Área"
-        android:textColor="@color/Grey"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txtValorExperienciasDoUsuario"
-        />
-
-    <TextView
-        android:id="@+id/txtValorTempoUsuario"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginEnd="40dp"
-        android:padding="10dp"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txtTempoUsuario"
-        tools:text="1 Ano"
-        />
+        <TextView
+            android:id="@+id/txtv_profissao_usuario_valor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:padding="4dp"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtProfissaoDoUsuario"
+            tools:text="Desenvolvedor Web"
+            />
 
 
-    <Button
-        android:id="@+id/btn_addDados"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:backgroundTint="#5CC6BA"
-        android:text="@string/adicionar_dados_btn_perfil"
-        android:layout_marginBottom="24dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        />
+        <TextView
+            android:id="@+id/txtFormacaoDoUsuario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:padding="10dp"
+            android:text="Formação"
+            android:textStyle="bold"
+            android:textColor="@color/Grey"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtv_profissao_usuario_valor" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/txtValorFormacaoDoUsuario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:padding="4dp"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtFormacaoDoUsuario"
+            tools:text="Graduação em Engenharia de Computação"
+            />
+
+        <TextView
+            android:id="@+id/txtExperienciasDoUsuario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:padding="10dp"
+            android:text="Experiências"
+            android:textColor="@color/Grey"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtValorFormacaoDoUsuario"
+            />
+
+        <TextView
+            android:id="@+id/txtValorExperienciasDoUsuario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:padding="4dp"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtExperienciasDoUsuario"
+            tools:text="Desenvolvedor Web Junior na Empresa X" />
+
+        <TextView
+            android:id="@+id/txtTempoUsuario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:padding="10dp"
+            android:text="Tempo na Área"
+            android:textColor="@color/Grey"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtValorExperienciasDoUsuario"
+            />
+
+        <TextView
+            android:id="@+id/txtValorTempoUsuario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:padding="4dp"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtTempoUsuario"
+            tools:text="1 Ano"
+            />
+
+        <Button
+            android:id="@+id/btn_addDados"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:backgroundTint="#5CC6BA"
+            android:text="@string/adicionar_dados_btn_perfil"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="24dp"
+            app:layout_constraintTop_toBottomOf="@id/txtValorTempoUsuario"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

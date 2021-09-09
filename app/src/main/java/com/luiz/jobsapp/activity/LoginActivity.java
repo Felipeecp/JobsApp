@@ -56,7 +56,7 @@ public class LoginActivity extends AppCompatActivity {
     // [START declare_auth]
 
     // [END declare_auth]
-    
+
     private Usuario usuario;
 
     @Override
@@ -144,7 +144,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
 
-    // [START auth_with_facebook]
+
     private void handleFacebookAccessToken(AccessToken token) {
         Log.d(TAG, "handleFacebookAccessToken:" + token);
 
@@ -154,8 +154,7 @@ public class LoginActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            Intent i = new Intent(LoginActivity.this, HomeActivity.class);
-                            startActivity(i);
+                            abrirHome();
                             // Sign in success, update UI with the signed-in user's information
                             Log.d(TAG, "signInWithCredential:success");
                             FirebaseUser user = mAuth.getCurrentUser();
@@ -171,7 +170,7 @@ public class LoginActivity extends AppCompatActivity {
                     }
                 });
     }
-    // [END auth_with_facebook]
+
 
     private void updateUI(FirebaseUser user) {
     }
@@ -239,7 +238,7 @@ public class LoginActivity extends AppCompatActivity {
         }
         return false;
     }
-    
+
 
 
 }
