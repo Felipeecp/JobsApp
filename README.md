@@ -55,9 +55,15 @@ Para obter o código fonte, clone o repositório git no próprio Android Studio.
 
 ### Diagrama de caso de uso
 
+![](imagensDiagramas/DiagramaDeCasoDeUso.png)
+
 ### Diagrama de classes
 
+![](imagensDiagramas/DiagramaDeClasses.png)
+
 ### Diagrama de sequência
+
+![](imagensDiagramas/DiagramaDeSequencia.png)
 
 
 
