@@ -73,57 +73,34 @@ public class PerfilActivity extends AppCompatActivity {
 
     }
 
-
-
     private void PegarDados(){
         perfilRef.child(usuario.getUid()).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
+                Log.i("USUARIO DADOS", snapshot.getValue().toString());
                 Usuario user = snapshot.getValue(Usuario.class);
                 txtNome.setText(user.getNome());
-
-                DatabaseReference refDados = perfilRef.child(usuario.getUid()).child("dados");
-                adicionarDados(refDados);
-            }
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-
-            }
-        });
-    }
-
-    private void adicionarDados(DatabaseReference refDados){
-        /* Tratar a imagem aqui */
-        refDados.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                if(snapshot.exists()) {
-                    /* Tratar a imagem aqui */
+                if (user.getProfissao() != null){
                     btnAdicionarDados.setText("Atualizar dados");
-                    Dados dadosUser = snapshot.getValue(Dados.class);
-                    txtProfissao.setText(dadosUser.getProfissao());
-                    txtFormacao.setText(dadosUser.getFormacao());
-                    txtExperiencias.setText(dadosUser.getExperiencia());
-                    txtTempo.setText(dadosUser.getTempo());
-
-                    String urlString = dadosUser.getFoto();
+                    txtProfissao.setText(user.getProfissao());
+                    txtFormacao.setText(user.getFormacao());
+                    txtExperiencias.setText(user.getExperiencia());
+                    txtTempo.setText(user.getTempo());
+                    String urlString = user.getFoto();
                     Picasso.get().load(urlString).into(imagemPerfil);
-
-
                 } else {
                     Toast.makeText(getApplicationContext(),
                             "Atenção, adicione seus dados",
                             Toast.LENGTH_LONG)
                             .show();
                 }
-            }
 
+            }
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
 
             }
         });
     }
-
 
 }
