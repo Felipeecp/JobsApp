@@ -34,10 +34,10 @@ public class Servico implements Serializable {
                 .child(getIdServico())
                 .setValue(this);
 
-        salvarAnuncioPublico();
+        salvarOfertaPublica();
     }
 
-    private void salvarAnuncioPublico() {
+    private void salvarOfertaPublica() {
 
         DatabaseReference servicoRef = FirebaseConfig.getFirebaseDatabase().child("serviços");
 
@@ -47,18 +47,19 @@ public class Servico implements Serializable {
 
     }
 
-    public void removerAnuncio(){
+    public void removerOferta(){
 
         String idUsuario = FirebaseConfig.getIdUsuario();
         DatabaseReference servicoRef = FirebaseConfig.getFirebaseDatabase()
-                .child("meus_servicos")
+                .child("minhas_ofertas")
                 .child(idUsuario)
                 .child(getIdServico());
 
-        removerAnuncioPublico();
+        servicoRef.removeValue();
+        removerOfertaPublica();
     }
 
-    private void removerAnuncioPublico() {
+    private void removerOfertaPublica() {
 
         DatabaseReference serviçoRef = FirebaseConfig.getFirebaseDatabase()
                 .child("serviços")

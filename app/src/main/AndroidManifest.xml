@@ -14,8 +14,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.JobsApp">
         <activity
-            android:name=".activity.PerfilActivicty"
-            android:exported="true"/>
+            android:name=".activity.CadastroDadosPerfilActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.PerfilActivity"
+            android:exported="true" />
         <activity
             android:name=".activity.TermosECondicoesActivity"
             android:exported="true" />
@@ -26,7 +29,9 @@
             android:theme="@style/Theme.JobsApp.NoActionBar" />
         <activity
             android:name=".activity.DetalheOfertaActivity"
-            android:exported="true" />
+            android:exported="true"
+            android:parentActivityName=".activity.HomeActivity"
+            />
         <activity
             android:name=".activity.HomeActivity"
             android:exported="true" />
@@ -45,6 +50,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
     </application>
 
 </manifest>
