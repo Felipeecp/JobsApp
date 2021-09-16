@@ -65,6 +65,9 @@ Para obter o código fonte, clone o repositório git no próprio Android Studio.
 
 ![](imagensDiagramas/DiagramaDeSequencia.png)
 
+<hr>
+
+Link para download da APK do app: https://drive.google.com/file/d/10_RgPJG3iSBcqpLAQV_7g_dcm0GIFhKF/view?usp=sharing
 
 
 
