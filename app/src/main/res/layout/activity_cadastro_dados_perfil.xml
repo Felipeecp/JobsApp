@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.CadastroDadosPerfilActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardImgPerfilCadastro"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        app:cardCornerRadius="50dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+        <ImageView
+            android:id="@+id/imgPerfilCadastro"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:background="#FFFFFF"
+            android:scaleType="fitCenter"
+            android:src="@drawable/perfil_profile"
+            />
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_profissao"
+        app:boxStrokeWidth="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardImgPerfilCadastro"
+        android:background="@drawable/bg_edit_text"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_profissao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Profissão"
+            android:background="@drawable/bg_edit_text"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_formacao"
+        app:boxStrokeWidth="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/til_profissao"
+        android:background="@drawable/bg_edit_text"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_formacao"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Formação"
+            android:background="@drawable/bg_edit_text"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_experiencias"
+        app:boxStrokeWidth="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/til_formacao"
+        android:background="@drawable/bg_edit_text"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_experiencias"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Experiências"
+            android:background="@drawable/bg_edit_text"
+            android:gravity="top"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_tempo"
+        app:boxStrokeWidth="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/til_experiencias"
+        android:background="@drawable/bg_edit_text"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_tempo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Tempo na Área"
+            android:background="@drawable/bg_edit_text"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <Button
+        android:id="@+id/btn_salvar_dados"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="32dp"
+        android:text="Salvar Dados"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

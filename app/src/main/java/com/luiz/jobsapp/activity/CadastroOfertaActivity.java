@@ -38,7 +38,7 @@ import com.santalu.maskara.widget.MaskEditText;
 import java.util.Locale;
 
 public class CadastroOfertaActivity extends AppCompatActivity implements View.OnClickListener {
-    private EditText editNome, editDescricao, editLocal, editArea, campoQtdVagas;
+    private EditText editNome, editDescricao, editLocal, campoQtdVagas;
     private CurrencyEditText campoValor;
     private MaskEditText campoTelefone;
     private Button btnCadastrar;
@@ -193,6 +193,7 @@ public class CadastroOfertaActivity extends AppCompatActivity implements View.On
                                    if(!servico.getTelefone().isEmpty()){
                                        if(!servico.getDescricao().isEmpty()){
                                             salvarOferta();
+                                            finish();
                                        }else{
                                            exibirMensagemErro("Preencha o campo Descrição!");
                                        }

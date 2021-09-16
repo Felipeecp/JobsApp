@@ -6,11 +6,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/LinkWater"
     >
 
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:background="@color/LinkWater"
     tools:context=".activity.HomeActivity">
 
@@ -51,7 +52,6 @@
         android:layout_height="wrap_content"
         android:backgroundTint="@color/FundoPadrão"
         android:text="Área"
-
         android:textColor="@color/Grey"
         app:layout_constraintBottom_toTopOf="@id/view_line_2"
         app:layout_constraintEnd_toEndOf="parent"
@@ -81,9 +81,8 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_servicos"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
         android:layout_marginTop="6dp"
         android:orientation="vertical"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
@@ -92,17 +91,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtv_servicos"
         tools:listitem="@layout/item_servico" />
-
-    <!--    <com.google.android.material.bottomnavigation.BottomNavigationView-->
-    <!--        android:id="@+id/btm_navbar"-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        app:backgroundTint="#fff"-->
-    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
-    <!--        app:layout_constraintStart_toStartOf="parent"-->
-    <!--        app:layout_constraintEnd_toEndOf="parent"-->
-    <!--        app:menu="@menu/btm_navigation_menu"-->
-    <!--        />-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

@@ -30,9 +30,10 @@ import com.luiz.jobsapp.helper.RecyclerItemClickListener;
 import com.luiz.jobsapp.model.Servico;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
+
+import dmax.dialog.SpotsDialog;
 
 public class HomeActivity extends AppCompatActivity {
 
@@ -44,6 +45,7 @@ public class HomeActivity extends AppCompatActivity {
     private boolean filtrandoPorArea = false;
     private DatabaseReference servicosPublicosRef;
     private Button btnArea;
+    private android.app.AlertDialog dialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -108,6 +110,13 @@ public class HomeActivity extends AppCompatActivity {
 
     // Recupera anuncios do firebase para exibir utilizando recyclerView
     public void recuperarAnunciosPublicos(){
+
+        dialog = new SpotsDialog.Builder().setContext(this)
+                .setMessage("Carregando Anúncios")
+                .setCancelable(false)
+                .build();
+        dialog.show();
+
         servicoList.clear();
         servicosPublicosRef.addValueEventListener(new ValueEventListener() {
             @Override
@@ -120,6 +129,7 @@ public class HomeActivity extends AppCompatActivity {
                 }
                 Collections.reverse(servicoList);
                 adapterOfertas.notifyDataSetChanged();
+                dialog.dismiss();
             }
 
             @Override
@@ -155,6 +165,7 @@ public class HomeActivity extends AppCompatActivity {
                 filtroArea = spinnerArea.getSelectedItem().toString();
                 recuperarAnunciosPorArea();
                 filtrandoPorArea = true;
+
             }
         });
 
@@ -209,8 +220,16 @@ public class HomeActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
 
         switch (item.getItemId()){
-            case R.id.home_perfil_top:
+            case R.id.menu_home_minhas_ofertas:
                 startActivity(new Intent(HomeActivity.this, MinhasOfertasActivity.class));
+                break;
+            case R.id.menu_home_perfil:
+                startActivity(new Intent(HomeActivity.this, PerfilActivity.class));
+                break;
+            case R.id.menu_home_sair:
+                autenticacao.signOut();
+                invalidateOptionsMenu();
+                startActivity(new Intent(HomeActivity.this, LoginActivity.class));
                 break;
         }
 

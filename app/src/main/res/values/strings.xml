@@ -1,4 +1,8 @@
 <resources>
+    <!-- Facebook   -->
+    <string name="facebook_app_id">163148279213195</string>
+    <string name="fb_login_protocol_scheme">fb163148279213195</string>
+
     <string name="app_name">Jobs</string>
     <string name="home_main_text">Encontre um Serviço</string>
     <string name="cadatro_nome">Nome</string>
@@ -28,11 +32,20 @@
     <string name="btn_cadastrar_oferta">Cadastrar Serviço</string>
 
     <!--Perfil -->
-    <string name="txt_nome_do_perfil">Brenda Carvalho</string>
-    <string name="txt_profissao">Profissão: atora, modelo e design</string>
+    <string name="txt_nome_do_perfil">Nome do Usuario</string>
+    <string name="txt_profissao">Profissão</string>
     <string name="txt_avaliacao_usuario">Avaliação do usuário</string>
     <string name="txt_contratar_usuario">Contratar Usuário</string>
     <string name="entrar_em_contato">Entrar em contato</string>
+    <string name="titulo_detalhes">Titulo</string>
+    <string name="descricao_detalhes">Descrição:</string>
+    <string name="salario_detalhes">Salário:</string>
+    <string name="quantidade_de_vagas_detalhes">Quantidade de Vagas:</string>
+    <string name="telefone_detalhes">Telefone:</string>
+    <string name="menu_txt_minhas_ofertas">Minhas Ofertas</string>
+    <string name="menu_txt_perfil">Perfil</string>
+    <string name="adicionar_dados_btn_perfil">Adicionar Dados</string>
+    <string name="txt_sair">Sair</string>
     <string-array name="tempo_oferta">
         <item>Diario</item>
         <item>Semanal</item>
@@ -43,5 +56,10 @@
         <item>TI</item>
         <item>Reforma</item>
         <item>Design</item>
+        <item>Todas</item>
+        <item>Educação</item>
+        <item>Programação</item>
+        <item>Motorista</item>
+        <item>Serviço Doméstico</item>
     </string-array>
 </resources>
