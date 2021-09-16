@@ -157,14 +157,20 @@ public class CadastroDadosPerfilActivity extends AppCompatActivity implements Vi
 
     private void salvarDados(String profissao, String formacao, String experiencia, String tempo, String caminhoImagem){
         Map<String, Object> dadosParaSalvar = new HashMap<>();
+
+
         dadosParaSalvar.put("foto", caminhoImagem);
         dadosParaSalvar.put("profissao", profissao);
         dadosParaSalvar.put("formacao", formacao);
         dadosParaSalvar.put("experiencia", experiencia);
         dadosParaSalvar.put("tempo", tempo);
 
-        perfilRef.child("usuarios").child(autenticacao.getUid()).updateChildren(dadosParaSalvar);
+        perfilRef.child("usuarios").child(autenticacao.getUid())
+                .child("portfolio")
+                .setValue(dadosParaSalvar);
     }
+
+
 
     private void escolherImage(int requestCode) {
         Intent i = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);

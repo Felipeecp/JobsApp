@@ -229,6 +229,7 @@ public class HomeActivity extends AppCompatActivity {
             case R.id.menu_home_sair:
                 autenticacao.signOut();
                 invalidateOptionsMenu();
+                startActivity(new Intent(HomeActivity.this, LoginActivity.class));
                 break;
         }
 

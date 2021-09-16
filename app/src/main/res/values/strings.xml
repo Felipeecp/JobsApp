@@ -57,5 +57,9 @@
         <item>Reforma</item>
         <item>Design</item>
         <item>Todas</item>
+        <item>Educação</item>
+        <item>Programação</item>
+        <item>Motorista</item>
+        <item>Serviço Doméstico</item>
     </string-array>
 </resources>
