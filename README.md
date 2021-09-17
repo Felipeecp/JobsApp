@@ -67,6 +67,9 @@ Para obter o código fonte, clone o repositório git no próprio Android Studio.
 
 ![candidatar-1](https://user-images.githubusercontent.com/66011013/133710357-fce98693-4f56-4470-8c1c-f2debfd8c4bb.jpg)
 
+### Diagrama de Estado
+#### Obs: foi feito as opções de cadastrar e excluir uma oferta, no entanto, foi decidido que ao invés de excluir seria melhor ocultar a oferta  (ficar invisível para os outros usuário), além do estado finalizado que seria a ação final entre os dois usuários, mas como não foi implementado (ainda não) foi só adicionado a ideia no diagrama de estado.
+![0001](https://user-images.githubusercontent.com/66011013/133713846-ec6faae0-900e-4071-acdc-b596f4511233.jpg)
 
 <hr>
 
